@@ -195,7 +195,7 @@ INSWORKS_VDEROOT=C:\Program Files\Insnex\InsWorks VDE
 
 ```bash
 # 1. 克隆仓库
-git clone https://coderep.insnex.com/AduSkin/vdeapp.winforms.git
+git clone https://github.com/InsWorks-Software/VDEApp.Winform.git
 cd vdeapp.winforms
 
 # 2. 在 Visual Studio 中打开解决方案
@@ -698,7 +698,7 @@ public async Task RunAsync_ValidTask_ShouldExecuteSuccessfully()
 ```bash
 # Fork 本仓库到你的账户
 # 然后克隆到本地
-git clone https://coderep.insnex.com/YOUR_USERNAME/vdeapp.winforms.git
+git clone https://github.com/YOUR_USERNAME/VDEApp.Winform.git
 cd vdeapp.winforms
 ```
 
@@ -1149,7 +1149,7 @@ public class ModbusCommunication : ICommunication
 
 ### 官方资源
 
-- **GitLab 仓库**: https://coderep.insnex.com/AduSkin/vdeapp.winforms
+- **Github 仓库**: https://github.com/InsWorks-Software/VDEApp.Winform.git
 - **Insnex 官网**: https://www.insnex.com
 - **技术支持**: support@insnex.com
 
@@ -1225,7 +1225,7 @@ public class ModbusCommunication : ICommunication
 
 感谢以下组织和项目对本项目的支持：
 
-[![Insnex](https://img.shields.io/badge/Insnex-盈视科技-blue)](https://www.insnex.com)
+[![Insnex](https://img.shields.io/badge/Insnex-INSNEX-blue)](https://www.insnex.com)
 [![AntdUI](https://img.shields.io/badge/AntdUI-UI组件-orange)](https://github.com/AntdUI/AntdUI)
 
 ---
