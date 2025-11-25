@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7D70EA2-A691-4E6C-971B-BBDB08A241E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VDEApp</RootNamespace>
+    <AssemblyName>VDEApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntdUI, Version=2.1.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Output\Assemblies\AntdUI.dll</HintPath>
+    </Reference>
+    <Reference Include="IKapBoardClassLibrary">
+      <HintPath>..\Output\Assemblies\Cameras\ITEK\IKapBoardClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="InsCHVSControl.NET">
+      <HintPath>..\Output\Assemblies\Cameras\Insnex\InsCHVSControl.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.AcqFifo">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.AcqFifo.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.AcqFifo.Controls">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.AcqFifo.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.ImageEnhancement">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.ImageEnhancement.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.ImageFile">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.ImageFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.ImageFile.Controls">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.ImageFile.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.ToolEditor.Controls">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.ToolEditor.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.AI">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.AI.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.Color">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.Common">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.Controls">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.Core">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.Display">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision2D.ToolBlock">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision2D.ToolBlock.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision3D.Core">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision3D.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision3D.CorePlus">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision3D.CorePlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.Vision3D.Display">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.Vision3D.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="Insnex.VisionCore">
+      <HintPath>$(INSWORKS_VDEROOT)\ReferencedAssemblies\Insnex.VisionCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=3.2.0.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.3.2.0\lib\net462\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.10\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=9.0.0.10, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.9.0.10\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.10, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.9.0.10\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MVSDK_Net">
+      <HintPath>..\Output\Assemblies\Cameras\DaHua\MVSDK_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CLIDelegate">
+      <HintPath>..\Output\Assemblies\Cameras\DaHua\CLIDelegate.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ThridLibray">
+      <HintPath>..\Output\Assemblies\Cameras\DaHua\ThridLibray.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\InitializeDirectory.cs" />
+    <Compile Include="Commons\AppConstant.cs" />
+    <Compile Include="Commons\AppPathRouter.cs" />
+    <Compile Include="Commons\AppModuleSingleton.cs" />
+    <Compile Include="Controllers\CommandParser.cs" />
+    <Compile Include="Controllers\SaveImageController.cs" />
+    <Compile Include="Devices\Attributes\CameraAttribute.cs" />
+    <Compile Include="Devices\Attributes\CameraSearchMethodAttribute.cs" />
+    <Compile Include="Devices\Cameras\InsCamera2DDaHua.cs" />
+    <Compile Include="Models\Languages\Localizer.cs" />
+    <Compile Include="Configs\CameraConfiguration.cs" />
+    <Compile Include="Configs\Display\DisplayConfig.cs" />
+    <Compile Include="Configs\Display\LayoutSelectedEventArgs.cs" />
+    <Compile Include="Configs\IConfig.cs" />
+    <Compile Include="Models\Product\ProductionDataEvent.cs" />
+    <Compile Include="Configs\SaveImageConfig.cs" />
+    <Compile Include="Controllers\DeviceController.cs" />
+    <Compile Include="Configs\GlobalConfig.cs" />
+    <Compile Include="Controllers\Display\DisplayController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Configs\TaskConfig.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TcpCommunicationController.cs" />
+    <Compile Include="Devices\Cameras\CHVS\InsCameraCHVS.cs" />
+    <Compile Include="Devices\Cameras\InsCamera2DHuaray.cs" />
+    <Compile Include="Devices\Cameras\InsVirtualCamera.cs" />
+    <Compile Include="Devices\Datas\AcquiredImageInfo.cs" />
+    <Compile Include="Devices\Enums\InsCamAcqMode.cs" />
+    <Compile Include="Devices\Enums\InsCameraScanDirection.cs" />
+    <Compile Include="Devices\Enums\InsCameraTriggerMode.cs" />
+    <Compile Include="Devices\Enums\InsCameraType.cs" />
+    <Compile Include="Devices\Enums\InsImageType.cs" />
+    <Compile Include="Devices\EventArgs\AcquiredEventArgs.cs" />
+    <Compile Include="Devices\EventArgs\CamConnectChangeEventArgs.cs" />
+    <Compile Include="Devices\Cameras\ICamera.cs" />
+    <Compile Include="Devices\InsfwDeviceManager.cs" />
+    <Compile Include="FromExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromExample.Designer.cs">
+      <DependentUpon>FromExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ServiceConfigurator.cs" />
+    <Compile Include="Infrastructure\ServiceLocator.cs" />
+    <Compile Include="LogModule\LogAppender.cs" />
+    <Compile Include="LogModule\Log.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Devices\Enums\InsCameraVendor.cs" />
+    <Compile Include="Models\Operations\OpenHistory.cs" />
+    <Compile Include="Models\Operations\OperationModel.cs" />
+    <Compile Include="Models\Product\ProductionDataStatus.cs" />
+    <Compile Include="Models\Product\ImageSaveOptions.cs" />
+    <Compile Include="Models\Product\ResponseType.cs" />
+    <Compile Include="Models\Product\RunType.cs" />
+    <Compile Include="Models\Project\ProjectModel.cs" />
+    <Compile Include="Models\TaskNodes\CalibrationNode.cs" />
+    <Compile Include="Models\TaskNodes\InspectionNode.cs" />
+    <Compile Include="Models\TaskNodes\AcquireNode.cs" />
+    <Compile Include="Models\TaskNodes\INode.cs" />
+    <Compile Include="Models\TaskNodes\TaskModel.cs" />
+    <Compile Include="Monitors\Cameras\CameraMonitor.cs" />
+    <Compile Include="Monitors\Cameras\SaveImageMonitor.cs" />
+    <Compile Include="Monitors\IMonitor.cs" />
+    <Compile Include="Monitors\MonitorManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExampleClass.cs" />
+    <Compile Include="Utils\Communication\InsTcpClient.cs" />
+    <Compile Include="Utils\Communication\InsTcpServer.cs" />
+    <Compile Include="Utils\Exceptions\ConfigException.cs" />
+    <Compile Include="Utils\Exceptions\OperationFailureException.cs" />
+    <Compile Include="Utils\Exceptions\OperationSuccessfulException.cs" />
+    <Compile Include="Utils\Memory\MemoryOperator.cs" />
+    <Compile Include="Views\Devices\Cameras\DlgAddCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\DlgAddCamera.Designer.cs">
+      <DependentUpon>DlgAddCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\UCDaHuaConfigure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\UCDaHuaConfigure.Designer.cs">
+      <DependentUpon>UCDaHuaConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Display\WProductDisplaybind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Display\WProductDisplaybind.Designer.cs">
+      <DependentUpon>WProductDisplaybind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Display\WProductDisplaystructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Display\WProductDisplaystructure.Designer.cs">
+      <DependentUpon>WProductDisplaystructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\DlgCameraConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\DlgCameraConfigure.Designer.cs">
+      <DependentUpon>DlgCameraConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\DlgCameraList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\DlgCameraList.Designer.cs">
+      <DependentUpon>DlgCameraList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\UCVirtualConfigure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Devices\Cameras\UCVirtualConfigure.Designer.cs">
+      <DependentUpon>UCVirtualConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\WinAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Help\WinAbout.Designer.cs">
+      <DependentUpon>WinAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\WinUserManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Help\WinUserManual.Designer.cs">
+      <DependentUpon>WinUserManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\IMainLoader.cs" />
+    <Compile Include="Views\Main\UCProductDisplayRecordItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCProductDisplayRecordItem.Designer.cs">
+      <DependentUpon>UCProductDisplayRecordItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReplayImages\WinReplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReplayImages\WinReplay.Designer.cs">
+      <DependentUpon>WinReplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UCProductDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCProductDisplay.Designer.cs">
+      <DependentUpon>UCProductDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UCProductionLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCProductionLog.Designer.cs">
+      <DependentUpon>UCProductionLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UCProductionData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCProductionData.Designer.cs">
+      <DependentUpon>UCProductionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UCStatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCStatusBar.Designer.cs">
+      <DependentUpon>UCStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UCTitleBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCTitleBar.Designer.cs">
+      <DependentUpon>UCTitleBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UCToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UCToolBar.Designer.cs">
+      <DependentUpon>UCToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Project\WinProjectNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Project\WinProjectNew.Designer.cs">
+      <DependentUpon>WinProjectNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Task\WinAcquire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Task\WinAcquire.Designer.cs">
+      <DependentUpon>WinAcquire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Task\WinSPECInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Task\WinSPECInput.Designer.cs">
+      <DependentUpon>WinSPECInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Task\WinTaskManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Task\WinTaskManage.Designer.cs">
+      <DependentUpon>WinTaskManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Task\WinCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Task\WinCalibration.Designer.cs">
+      <DependentUpon>WinCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Task\WinInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Task\WinInspection.Designer.cs">
+      <DependentUpon>WinInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\WinEquipmentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tools\WinEquipmentManagement.Designer.cs">
+      <DependentUpon>WinEquipmentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\WinOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tools\WinOption.Designer.cs">
+      <DependentUpon>WinOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools\WinTcpCommunicationDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tools\WinTcpCommunicationDebug.Designer.cs">
+      <DependentUpon>WinTcpCommunicationDebug.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FromExample.resx">
+      <DependentUpon>FromExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Devices\Cameras\DlgAddCamera.resx">
+      <DependentUpon>DlgAddCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Devices\Cameras\UCDaHuaConfigure.resx">
+      <DependentUpon>UCDaHuaConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Display\WProductDisplaybind.resx">
+      <DependentUpon>WProductDisplaybind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Display\WProductDisplaystructure.resx">
+      <DependentUpon>WProductDisplaystructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Help\WinAbout.resx">
+      <DependentUpon>WinAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Devices\Cameras\DlgCameraConfigure.resx">
+      <DependentUpon>DlgCameraConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Devices\Cameras\DlgCameraList.resx">
+      <DependentUpon>DlgCameraList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Devices\Cameras\UCVirtualConfigure.resx">
+      <DependentUpon>UCVirtualConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCProductDisplay.resx">
+      <DependentUpon>UCProductDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCProductDisplayRecordItem.resx">
+      <DependentUpon>UCProductDisplayRecordItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCProductionLog.resx">
+      <DependentUpon>UCProductionLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCProductionData.resx">
+      <DependentUpon>UCProductionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCStatusBar.resx">
+      <DependentUpon>UCStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCTitleBar.resx">
+      <DependentUpon>UCTitleBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UCToolBar.resx">
+      <DependentUpon>UCToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Project\WinProjectNew.resx">
+      <DependentUpon>WinProjectNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReplayImages\WinReplay.resx">
+      <DependentUpon>WinReplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Task\WinAcquire.resx">
+      <DependentUpon>WinAcquire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Task\WinSPECInput.resx">
+      <DependentUpon>WinSPECInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Task\WinTaskManage.resx">
+      <DependentUpon>WinTaskManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Task\WinCalibration.resx">
+      <DependentUpon>WinCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Task\WinInspection.resx">
+      <DependentUpon>WinInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tools\WinEquipmentManagement.resx">
+      <DependentUpon>WinEquipmentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tools\WinOption.resx">
+      <DependentUpon>WinOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tools\WinTcpCommunicationDebug.resx">
+      <DependentUpon>WinTcpCommunicationDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

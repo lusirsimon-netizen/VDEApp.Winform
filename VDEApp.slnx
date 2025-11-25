@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="TCPClient/TCPClient.csproj" Id="d153bb72-9e4e-416c-a0af-109542a54fe0" />
+  <Project Path="VDEApp.Tests/VDEApp.Tests.csproj" />
+  <Project Path="VDEApp/VDEApp.csproj" Id="b7d70ea2-a691-4e6c-971b-bbdb08a241e5" />
+</Solution>

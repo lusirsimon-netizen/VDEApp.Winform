@@ -1,0 +1,618 @@
+###########窗口 or 通用###################
+#通用
+INFO=信息
+WARN=警告
+DEBUG=调试
+ERROR=错误
+FATAL=致命
+Warning = 警告
+Error = 错误
+Common_Tip=提示
+
+#主窗口
+MainForm_tabProductDisplay=生产
+MainForm_tabPage2=缺陷
+MainForm_groupBox1=生产数据
+MainForm_lblTask=任务管理
+MainForm_lblCamera=取图
+MainForm_lblCalibration=标定
+MainForm_lblInspection=检测
+MainForm_lblOneceRun=单次运行
+MainForm_lblLoopRun=持续运行
+MainForm_lblCommunication=通信
+MainForm_lblReplayImage=仿图
+MainForm_lblProduction=生产运行
+ProductionRecord_ProductionTime=时间
+ProductionRecord_Status=状态
+ProductionRecord_NoData=暂无生产数据
+
+#创建项目
+WinProjectNew_btnCancel=取消
+WinProjectNew_lblProjectName=项目名称
+WinProjectNew_lblProjectPath=项目路径
+SaveProject=保存项目
+CreateProject=创建项目
+Save=保存
+Create=创建
+
+#主窗口—日志板块
+MainForm_LoggroupBox=日志
+MainForm_Infocheckbox=信息
+MainForm_Warncheckbox=警告
+MainForm_Debugcheckbox=调试
+MainForm_Errorcheckbox=错误
+MainForm_Fatalcheckbox=致命
+MainForm_Clearbutton=清空
+
+#主窗口—菜单
+TitleBar_Project = 项目
+TitleBar_NewProject = 新项目
+TitleBar_OpenProject = 打开项目
+TitleBar_History = 历史记录
+TitleBar_Save = 保存项目
+TitleBar_Exit = 退出系统
+TitleBar_Tool = 工具
+TitleBar_DeviceManagement = 设备管理
+TitleBar_Communication = 通讯
+TitleBar_Options = 选项
+TitleBar_Display = 显示
+TitleBar_Show_record_configuration = 显示record配置
+TitleBar_Help = 帮助
+TitleBar_UserManual = 用户手册
+TitleBar_About = 关于
+TitleBar_Language = 语言
+TitleBar_Current = 当前
+Chinese = 中文
+English = English
+Example = 示例
+TitleBar_ProjectFile=项目文件
+TitleBar_LoadProject=加载项目
+TitleBar_ProjectSavedSuccessfully=项目保存成功！
+TitleBar_ProjectSavedFailed=项目保存失败！
+TitleBar_NeedSaveProject=项目路径不存在，请保存项目！
+TitleBar_Exitapplication=确定要退出应用程序吗?
+
+#工具栏
+ToolBar_Production=生产运行
+ToolBar_Replay=仿图
+ToolBar_SimulationRun=模拟运行
+ToolBar_Ready=就绪
+ToolBar_FailedToStartLoopOperation=启动循环运行失败!
+ToolBar_PleaseSelectTask=当前未选择任务，请先选择任务后再运行!
+ToolBar_OneceRunFailed=启动单次运行失败!
+ToolBar_StopLoopRunException=停止循环异常!
+ToolBar_StopLoopRunFailed=停止循环失败!
+ToolBar_StopMonitoring=停止监听
+ToolBar_StartMonitoring=启动监听
+ToolBar_PleaseSelectedTaskOpenCamera=请先选择一个任务再打开取像窗口
+ToolBar_PleaseConfigCamera=当前没有配置任何相机，是否跳转至相机配置页？
+ToolBar_ConfigCamera=未配置相机
+ToolBar_PleaseSelectedTaskOpenCalibration=请先选择一个任务再打开标定窗口!
+ToolBar_PleaseSelectedTaskOpenInspection=请先选择一个任务再打开检测窗口!
+ToolBar_SelectTask=未选择任务
+
+#任务管理
+WinTaskManage_WinTaskSetting=任务管理
+WinTaskManage_btnAddTask=添加任务
+WinTaskManage_btnRemoveTask=删除任务
+newTask=新建任务
+ID = 序号
+TaskName = 任务名
+CreateTime = 创建日期
+Status = 状态
+Option = 操作
+Current = 当前任务
+TaskManage_AddTaskFailedFmt=添加新任务失败：{0}
+TaskManage_NameEmpty=任务名不能为空
+TaskManage_NameInvalidChars=任务名包含非法字符
+TaskManage_NameDuplicate=任务名不能重名
+TaskManage_Action_Rename=重命名
+TaskManage_RenameFailedFmt=重命名失败：{0}
+TaskManage_DeleteCurrentConfirmTitle=确定删除 当前任务？
+TaskManage_DeleteConfirmTitle=确认删除
+TaskManage_DeleteCurrentConfirmMessageFmt={0}\n\n注意：这是当前正在执行的任务。
+TaskManage_DeleteConfirmMessageFmt=确定要删除任务“{0}”吗？
+TaskManage_copyTask=复制
+TaskManage_copyTaskfail=复制失败：
+DisplayController_ResubscribeFailed=重新订阅显示控制器事件失败
+TaskManage_AutoSaveSuccessFmt=【{0}】任务：{1}，自动保存成功。
+ImageSave_BatchCompleteWithFailFmt=[ImageSave] 批次完成（含失败）：Task={0}, Category={1}, Total={2}, Dir={3}
+ImageSave_BatchCompleteFmt=[ImageSave] 批次完成：Task={0}, Category={1}, Total={2}, Dir={3}
+ImageSave_EnqueuePrepErrorFmt=截图入队准备阶段发生错误：{0}
+ImageSave_SaveFailedFmt=[ImageSave] 保存失败：原因={0} | 尝试路径={1}
+ImageSave_SaveFailedFmt=[ImageSave] 保存失败：原因={0} | 尝试路径={1}
+Snapshot_GenerateFailed_NullImage=生成截图失败：返回空图像
+
+#关于窗口
+WinAbout_label_copyright=苏州苏映视图像软件有限公司 版权所有
+WinAbout_pageHeader_About=关于InsWorks
+WinAbout_shield_Ins=https://www.insnex.com/
+WinAbout_shield_License=Apache1.0
+WinAbout_shield_Project=V1.1.0
+WinAbout_shield_suppord=技术支持邮箱
+WinAbout_shield_Fork=Fork
+WinAbout_shield_Donwload=Donwload
+WinAbout_shield_C=100%
+
+# 设备管理
+log_warning_invalid_camera_config = 相机配置文件格式错误，无法读取相机信息
+log_error_camera_search_failed = 相机类型“{0}”搜索失败：{1}
+log_error_cannot_create_camera_instance = 无法为类型“{0}”创建相机实例
+log_error_camera_init_failed = 相机“{0}”初始化失败：{1}
+log_error_camera_restore_state_failed = 相机“{0}”复原状态失败：{1}
+log_error_camera_init_connect_failed = 相机“{0}”连接失败：{1}
+log_error_camera_init_load_config_failed = 相机“{0}”加载配置失败：{1}
+
+msg_new_camera_duplicate_name = 名称为“{0}”的相机已经存在
+msg_warning_no_image_captured = 取图失败，请检查相机配置
+log_warning_no_image_captured = 相机“{0}”：取图失败，相机配置可能存在问题
+msg_error_image_capture_failed = 取图失败：{0}
+log_error_image_capture_failed = 相机“{0}”：取图失败：{1}
+msg_failed_connect_camera = 相机“{0}”：连接相机失败
+dlg_cam_conf_menu_config = 配置文件
+dlg_cam_conf_menu_loadconfig = 导入
+dlg_cam_conf_menu_exportconfig = 导出
+
+msg_duplicate_camera_selected = 此相机已经存在
+msg_duplicate_camera_selected_title = 相机重复
+
+DlgCameraConfigure_btnConnect = 连接
+DlgCameraConfigure_btnDisconnect = 断开连接
+DlgCameraConfigure_btnCapture = 取图
+DlgCameraConfigure_header = 配置相机
+DlgCameraConfigure_btnOK = 确定
+DlgCameraConfigure_gbDisplay = 取像预览
+## 虚拟相机配置
+DlgCameraConfigure_btnSelectPath = 选择
+DlgCameraConfigure_lbPath = 路径
+DlgCameraConfigure_lbBatchSize = 取图数量
+## 大华相机配置
+DlgCameraConfigure_tabInformation = 基本信息
+DlgCameraConfigure_lbDevices = 设备
+DlgCameraConfigure_lbType = 类型
+DlgCameraConfigure_lbCameraKey = 相机键
+DlgCameraConfigure_lbVendorName = 供应商
+DlgCameraConfigure_lbVersion = 版本
+DlgCameraConfigure_tabSettings = 参数
+DlgCameraConfigure_lbTimeout = 超时
+DlgCameraConfigure_lbExposureTime = 曝光时间
+DlgCameraConfigure_lbGain = 增益
+DlgCameraConfigure_tabTrigger = 触发
+DlgCameraConfigure_lbEnable = 启用
+DlgCameraConfigure_lbMode = 模式
+DlgCameraConfigure_tabImageFormat = 图像格式
+DlgCameraConfigure_lbFormat = 格式
+
+DlgCameraList_btnOK = 确定
+DlgCameraList_btnAddCamera = 添加
+DlgCameraList_btnRemoveCamera = 删除
+DlgCameraList_header = 相机列表
+DlgCameraList_ColName = 名称
+DlgCameraList_ColModel = 型号
+DlgCameraList_ColInfo = 信息
+DlgCameraList_ColConfigure = 配置
+
+DlgAddCamera_header = 添加相机
+DlgAddCamera_btnOK = 确定
+DlgAddCamera_btnCancel = 取消
+DlgAddCamera_lbName = 名称
+DlgAddCamera_lbModel = 型号
+
+#通信界面
+WinTcpCommunicationDebug_btnTcpReStart=重启服务
+WinTcpCommunicationDebug_labelTcpIP=IP:
+WinTcpCommunicationDebug_labelTcpPort=Port:
+WinTcpCommunicationDebug_TcpBtnReceiveClear=清除
+WinTcpCommunicationDebug_TcpBtnSend=发送
+WinTcpCommunicationDebug_TcpBtnSendClear=清除
+WinTcpCommunicationDebug_TcpBtnStop=停止
+WinTcpCommunicationDebug_TcpGroupLog=信息
+WinTcpCommunicationDebug_TCPGroupresave=接收框
+WinTcpCommunicationDebug_TCPGroupsend=发送框
+WinTcpCommunicationDebug_TCPGrouptest=测试
+WinTcpCommunicationDebug_TCPHeader=通信设置
+
+#取像节点
+WinAcquire_lbCamera = 相机
+WinAcquire_lbBatchSize = 取像数量
+WinAcquire_lbTimeout = 超时
+WinAcquire_lbExposureTime = 曝光时间
+WinAcquire_btnConfigure = 配置
+WinAcquire_btnOK = 确认
+WinAcquire_btnCancel = 取消
+Acquire Node = 取像节点
+log_error_empty_acquire_node_config = 取像节点配置无效：配置文件为空
+log_error_invalid_acquire_node_camera = 取像节点配置无效：无法找到GUID为“{0}”的相机
+acquire_error_no_camera = {0}：没有选择相机
+acquire_error_no_image_acquired = {0}：取像结果为空
+
+#标定窗口
+WinCalibration_btnRestore=恢复
+WinCalibration_btnSave=保存
+WinCalibration_tabParam=参数
+WinCalibration_tabEdit=编辑
+WinCalibration_btnNewParam=新建
+WinCalibration_btnSaveParams=应用
+标定节点=-标定节点
+
+#检测窗口
+WinInspection_btnRestore=恢复
+WinInspection_btnSave=保存
+WinInspection_btnNewSPEC=新建
+WinInspection_btnSaveSPEC=应用
+检测节点=-检测节点
+
+#工具选项窗口
+WinOption_button1=保存
+WinOption_button2=还原
+WinOption_label1=原图
+WinOption_label2=存图模式
+WinOption_label3=存图结果
+WinOption_label4=存图位置
+WinOption_label5=存图格式
+WinOption_label6=存图位置
+WinOption_label7=存图结果
+WinOption_label8=截图
+WinOption_pageheaderOption=选项
+WinOption_tabPage1=存图设置
+WinOption_YTOpenFloder=打开
+WinOption_JTOpenFloder=打开
+WInOption_WireEvents_savetoproj=已保存到项目
+WInOption_WireEvents_savefail=保存失败
+WInOption_restored_save=已恢复默认并保存
+WInOption_restored_savefail=恢复默认失败
+WinOption_PickDirInto_select=选择存图根目录
+OpenDir_Failed=无法打开目录：{0}
+Project_Save_PartialImageDirCreateFailed=设置已保存，但预创建部分存图目录失败：{0}
+Project_Save_Failed=Project saving failed: {0}
+
+#状态条
+Status_Ready=就绪
+SaveImage=存图
+Camera_Connected=已连接
+Camera_Disconnected=掉线
+
+#显示结果窗口
+UCProductDisplaystructure_btnRefresh=确认刷新
+UCProductDisplaystructure_lbColumns=行数
+UCProductDisplaystructure_lbLines=列数
+UCProductDisplaystructure_pHLayoutsettings=布局设置
+
+#绑定节点窗口
+WProductDisplaybind_btnRecordBind=确认显示
+WProductDisplaybind_lbNodeRecord=节点/Record
+WProductDisplaybind_lbTaskName=任务
+WProductDisplaybind_pageHeader1=显示绑定页面
+WProductDisplaybind_lbRecordDisplayName=显示名称
+
+# 产品显示相关描述
+ProductDisplay_UnboundDescription=该显示区域尚未绑定任何数据
+ProductDisplay_RefreshedDescription=数据已最新
+ProductDisplay_NotRefreshedDescription=数据可能不是最新的
+ProductDisplay_ProductionDisplay = 产品显示​
+ProductDisplay_CustomLayout = 自定义布局
+ProductDisplay_BoundStatus = 已绑定
+ProductDisplay_UnboundStatus = 未绑定
+ProductDisplay_BindingStatusTip = 绑定状态: {0}
+ProductDisplay_RefreshedStatus = 已刷新
+ProductDisplay_NotRefreshedStatus = 未刷新
+ProductDisplay_RefreshStatusTip = 刷新状态: {0}
+Menu_OpenDisplayBindingInterface = 打开显示绑定窗口
+Menu_Unbind = 解绑
+
+
+#仿图窗口
+WinReplay_btnContinueRun=持续运行
+WinReplay_btnLoadImage=加载
+WinReplay_btnNowTask=Task
+WinReplay_btnOneRun=单步运行
+WinReplay_labImageFolder=图片文件夹
+WinReplay_labTime=时间间隔(s)
+WinReplay_ReplayText=当前任务
+WinReplay_tabHeader1=仿图设置
+Replay_Btn_Stop=停止运行
+WinReplay_labRunCount=运行次数
+
+###########Message or Log###################
+# 通用消息（中文版本）
+Message_RenameFailed=重命名失败: {0}
+Message_PleaseSelectATaskFirst = 请先选择一个任务
+Message_NoProjectLoaded = 没有加载项目
+Message_NoTaskGroupFound = 未找到任务组
+Message_TaskNotFound = 未找到任务: {0}
+Message_TaskExecutionFailed = 任务执行失败
+Message_ExceptionOccurredWhileExecutingTask = 执行任务时发生异常: {0}
+Message_TaskCompletedSuccessfully = 任务执行成功，找到{0}条检查记录
+Message_FailedToRefreshRecordList = 刷新记录列表失败: {0}
+Message_PleaseSelectATaskName = 请选择任务名称
+Message_PleaseSelectANodeName = 请选择节点名称
+Message_PleaseSelectARecordName = 请选择记录名称
+Message_NoBoundDisplayImagePleaseRightClickToBind = 没有绑定的显示图像，请右键点击进行绑定
+Message_FailedToInitializeInterfaceControls = 初始化界面控件失败: {0}
+Message_Label1ControlIsNullCannotBindDoubleClickEvent = label1控件为空，无法绑定双击事件
+Message_TxtRenameControlIsNullCannotBindEvents = txtRename控件为空，无法绑定事件
+Message_FailedToInitializeEventHandling = 初始化事件处理失败: {0}
+Message_FailedToStartRenaming = 开始重命名失败
+Message_RenameControlsNotInitialized = 重命名控件未初始化: txtRename={0}, label1={1}
+Message_FailedToFinishRenaming = 完成重命名失败
+Message_RenameCancelledOrNameUnchanged = 重命名已取消或名称未更改
+Message_FailedToUpdateBindingStatus = 更新绑定状态失败: {0}
+Message_FailedToUpdateRefreshStatus = 更新刷新状态失败: {0}
+Message_AreYouSureYouWantToUnbindTheCurrentDisplay = 确定要解绑当前显示吗？\n解绑后将返回未绑定状态。
+Message_ConfirmUnbinding = 确认解绑
+Message_BindingHasBeenSuccessfullyCancelled = 绑定已成功取消！
+Message_FailedToUnbind = 解绑失败: {0}
+Message_Error = 错误
+Message_BindingSuccessful = 绑定成功！
+Message_BindingFailed = 绑定失败: {0}
+Message_CannotGetParentContainerControlInformation = 无法获取父容器控件信息
+Message_FailedToHighlightDisplayControl = 高亮显示控件失败: {0}
+Message_FailedToCancelHighlightDisplay = 取消高亮显示失败: {0}
+Message_DisplayControllerInitializationFailed = 显示控制器初始化失败
+Message_FailedToLoadBindingConfigurations = 加载绑定配置失败
+Message_FailedToInitializeCacheCleanupTimer = 初始化缓存清理计时器失败
+Message_CacheCleanupFailed = 缓存清理失败
+Message_FailedToGetCurrentLayoutConfiguration = 获取当前布局配置失败
+Message_NumberOfRowsAndColumnsMustBeBetween1And10 = 行数和列数必须在1到10之间
+Message_FailedToCreateDisplayLayout = 创建显示布局失败
+Message_ControlIdCannotBeNull = 控件ID不能为空
+Message_TaskNameCannotBeNull = 任务名称不能为空
+Message_NodeNameCannotBeNull = 节点名称不能为空
+Message_RecordNameCannotBeNull = 记录名称不能为空
+Message_FailedToBindControl = 绑定控件失败
+Message_FailedToUnbindControl = 解绑控件失败
+Message_FailedToGetControlBindingInformation = 获取控件绑定信息失败 - 控件ID: {0}
+Message_FailedToGetAllBindingConfigurations = 获取所有绑定配置失败
+Message_FailedToGetRecordData = 获取记录数据失败 - 任务: {0}, 节点: {1}, 记录: {2}
+Message_NoProjectOrTaskGroupIsCurrentlyLoaded = 当前没有加载项目或任务组
+Message_RecordNotFound = 未找到记录: {0}
+Message_FailedToLoadRecordFromTaskNode = 从任务节点加载记录失败: {0}
+Message_NoProjectIsCurrentlyLoaded = 当前没有加载项目
+Message_FailedToGetTaskList = 获取任务列表失败
+Message_FailedToGetRecordNameList = 获取记录名称列表失败 - 任务: {0}, 节点: {1}
+Message_CannotSubscribeToNodeEventsProjectOrTaskGroupIsNull = 无法订阅节点事件，项目或任务组为空
+Message_FailedToSubscribeToNodeEvents = 订阅节点事件失败
+Message_TaskRunEventSubscriptionCompleted = 任务运行事件订阅完成
+Message_FailedToSubscribeToTaskRunEvents = 订阅任务运行事件失败
+Message_FailedToSubscribeToProjectEvents = 订阅项目事件失败
+Message_FailedToHandleProjectChangeEvent = 处理项目变更事件失败
+Message_FailedToHandleNodeEvent = 处理节点事件失败: {0}
+Message_FailedToHandleTaskRunEvent = 处理任务运行事件失败
+Message_FailedToTriggerBindingUpdateEvent = 触发绑定更新事件失败
+Message_FailedToCreateImageCopy = 创建图像副本失败
+Message_FailedToResetDisplayController = 重置显示控制器失败
+Message_FailedToUnsubscribeFromEvents = 取消订阅事件失败
+Message_ProjectNotLoadedCannotLoadDisplayConfiguration = 项目未加载，无法加载显示配置！
+Message_LoadFailed = 加载失败
+Message_FailedToParseConfigurationFile = 解析配置文件失败: {0}
+Message_FailedToCreateDefaultConfigurationFile = 创建默认配置文件失败: {0}
+Message_AnUnhandledErrorOccurredWhileLoadingDisplayConfiguration = 加载显示配置时发生未处理的错误
+Message_InsufficientPermissionsToCreateDirectory = 创建目录权限不足: {0}
+Message_FailedToCreateDirectory = 创建目录失败: {0}
+Message_ErrorOccurredWhileCheckingDirectory = 检查目录时发生错误
+Message_ConfigurationObjectIsNullUsingDefaultConfiguration = 配置对象为空，使用默认配置
+Message_FailedToWriteConfigurationFile = 写入配置文件失败: {0}
+Message_AnUnhandledErrorOccurredWhileSavingDisplayConfiguration = 保存显示配置时发生未处理的错误
+Message_NumberOfRowsAndColumnsMustBeGreaterThan0 = 行数和列数必须大于0
+Message_NumberOfRowsAndColumnsCannotExceed5 = 行数和列数不能超过5
+Message_OperationFailed = 操作失败: {0}
+Message_DefectImageAreaInitialState = 缺陷图像区域（初始状态）
+Message_FailedToInitializeDefectDisplayPanel = 初始化缺陷显示面板失败
+Message_DefectImageTitleInitializationFailed = 缺陷图像标题（初始化失败）
+Message_DetectedDefectImages = 检测到的缺陷图像
+Message_FailedToAddDefectImages = 添加缺陷图像失败
+Message_FailedToLoadDefectImages = 加载缺陷图像失败
+Message_FailedToOpenLargeImageViewer = 打开大图查看器失败
+Message_DefectImageDetails = 缺陷图像详情
+Message_FailedToReleaseResourcesWhenClosingLargeImageViewer = 关闭大图查看器时释放资源失败
+Message_InsufficientMemoryWhenOpeningLargeImageViewer = 打开大图查看器时内存不足
+Message_FailedToCloseLargeImageViewer = 关闭大图查看器失败
+Message_FailedToGenerateLayout = 生成布局失败
+Message_FailedToAddChildControlToPosition = 在位置({0}, {1})添加子控件失败
+Message_FailedToClearLayout = 清除布局失败
+Message_ControlInBindingConfigurationDoesNotExist = 绑定配置中的控件不存在: {0}
+Message_FailedToUpdateChildControlBinding = 更新子控件绑定失败: {0}
+Message_DetectedDefectImagesCount = 检测到的缺陷图像 ({0} 张)
+Message_FailedToProcessRecordUpdateEvent = 处理记录更新事件失败: {0}
+Message_FailedToUpdateDefectImageDisplay = 更新缺陷图像显示失败
+Message_FailedToHandleBindingUpdateEvent = 处理绑定更新事件失败: {0}
+Message_FailedToHandleTaskCompletionEvent = 处理任务完成事件失败
+Message_FailedToHighlightUnboundControls = 高亮未绑定控件失败: {0}
+Message_FailedToAdjustControlPositions = 调整控件位置失败: {0}
+Message_TaskCompletedSuccessfullyRecordsRefreshed=任务成功完成，记录已刷新
+Message_PleaseSelectANode=请选择一个节点
+Message_RenameSuccessful=重命名成功！
+Message_BindingSuccessful=绑定成功！
+Message_UnbindingFailed=解绑失败: {0}
+Message_FailedToOpenBindingWindow=打开绑定窗口失败: {0}
+Message_BindingParametersCannotBeEmpty=绑定参数不能为空
+#仿图页面
+Replay_Table_Column_Id=ID
+Replay_Table_Column_Guid=GUID
+Replay_Table_Column_SaveTime=保存时间
+Replay_Table_Column_Quantity=数量
+Replay_Table_Column_Status=状态
+Replay_Table_GroupId={0}
+Replay_Status_NotRun=未运行
+Replay_Table_Column_StdStatus=预期状态
+Replay_Table_Column_CurrentGroup=当前组
+Replay_Dialog_SelectFolderDesc=请选择图片文件夹
+Replay_Msg_InvalidFolderPath=请选择或输入一个有效的图片文件夹路径
+Replay_Msg_FolderNotExist=图片文件夹不存在
+Replay_Msg_NoImagesFound=该文件夹中未找到图片文件
+Replay_Msg_SelectTaskFirst=请先选择任务
+Replay_Msg_InvalidImageNaming=文件夹中的图片命名不符合要求，无法分组！请选择包含以下格式命名图片的文件夹：\n示例：{guid}/{sn}_{yyyyMMddHHmmssfff}_{expTag}_{status}_1.{ext}
+Replay_Msg_InvalidTime=请输入正确的运行时间
+Replay_Log_LoadPathFailed=加载图片路径失败
+Replay_Log_GetBatchSizeFailed=批次大小获取失败
+Replay_Log_ImagesLoaded=加载完成,共找到 {0} 张图片，分成 {1} 组。
+Replay_Log_ParsePathError=解析图片路径出错:{0}
+Replay_Log_SingleStepCompleted=单步运行全部完成，耗时 {0} ms
+Replay_Log_ContinueRunRoundCompleted=运行完一组，耗时 {0} ms
+Replay_Log_SingleStepFailed=单步运行失败
+Replay_Log_ContinuousStopped=已停止持续运行
+Replay_Log_GuidCompleted=GUID: {0} 执行完毕
+Replay_Log_WaitNextRound=等待 {0} ms 后开始下一轮
+Replay_Log_ContinuousInterrupted=持续运行已中断（未完成一轮）
+Replay_Log_ContinuousFailed=持续运行失败
+Replay_Log_LoadImageFailed=加载图片失败：{0}
+Replay_Msg_InvalidRunCount=请输入正确的运行次数
+#节点窗口
+tolb_save_tip=是否保存当前ToolBlock？
+tolb_save_confirm=保存确认
+tableParams_column_name=变量名
+tableParams_column_type=类型
+tableParams_column_value=值
+tableParams_column_btns=操作
+tolb_save_success=保存成功
+tolb_save_failed=保存失败
+tolb_save_fail=保存失败：{0}
+tolb_save_path=数据已成功保存至:  {0}
+tolb_save_error=保存过程中发生错误： {0}
+tolb_restore_tip=提示
+tolb_restore_error=错误
+tolb_restore_success=ToolBlock已重置！
+tolb_restore_fail=重置失败 : {0}
+tolb_param_select_tip=请选择类型
+tolb_param_input_tip1=请输入名称
+tolb_param_input_tip2=该名称已存在，请使用其他名称
+tolb_param_new_success=添加成功
+tolb_param_new_fail=添加失败：{0}
+tolb_param_save_success=保存参数并同步至TookBlock！
+tolb_param_save_failed=保存过程中发生错误: {0}
+tolb_param_edit_value_update=已更新{0}的值
+tolb_param_edit_value_fail=编辑值失败：{0}
+tolb_param_edit_value_tip1=值不能为空
+tolb_param_edit_value_tip2=无法确定对象类型
+tolb_param_edit_value_tip3=值 '{0}' 无法转换为类型 '{1}'
+tolb_param_edit_value_tip4=找不到键 '{0}'
+tolb_param_edit_name_tip1=变量名不能为空
+tolb_param_edit_name_tip2=变量名 '{0}' 已存在，请使用其他名称
+tolb_param_edit_name_success=更新变量名成功
+tolb_param_edit_name_fail=更新变量名失败: {0}
+tolb_param_delete_tip=确定要删除 '{0}' 吗？
+tolb_param_delete_confirm=确认删除
+tolb_param_delete_success=删除成功
+tolb_param_delete_fail=删除失败：{0}
+
+
+# 存图
+222=选择存图根目录（程序会在其下自动创建：任务名/原图 或 任务名/截图）
+
+#任务管理
+Folder_TaskConfig=任务配置
+Folder_RawImages=原图数据
+Folder_Snapshots=截图数据
+Rename_SaveDir_RollbackStart=存图目录重命名失败，正在回滚任务配置目录... 错误: {0}
+Rename_TaskConfig_Rollback_Success=任务配置目录回滚成功
+Rename_FatalRollbackFail=严重错误：重命名失败且回滚失败！请手动检查 Tasks 目录下文件夹名称。\n{0}
+Title_FatalError=致命错误
+Rename_TargetExists=目标文件夹已存在: {0}
+Rename_Busy_Message=无法重命名【{0}】文件夹，操作已终止。\n\n路径：{1}\n\n原因：文件夹正被打开或被其他程序占用。\n请关闭相关文件夹窗口后重试。
+Title_OperationFailed=操作失败
+Rename_Busy_Blocked=重命名被占用阻断: {0}
+Folder_Busy=文件夹被占用: {0}
+Rename_UnknownError=重命名【{0}】时发生未知错误：{1}
+Title_SystemError=系统错误
+
+#项目
+ProjectController_EnterName=请输入项目名称！
+ProjectController_ChooseDirectory=当前选择目录不为空，请选择一个空目录进行创建！
+ProjectController_ProjectAlreadyExists=当前项目文件已创建，请选择一个空目录进行创建！
+
+#任务控制核心键
+TaskController_TaskIsRunning_SkipInGroup=任务已被跳过
+TaskController_TaskIsRunning=任务正在运行中
+TaskController_NoOpenProject_CannotDeleteTask=当前没有打开的项目，无法删除任务。
+TaskController_TaskNotInProject_CannotDelete=指定的任务不存在于当前项目中，无法删除。
+TaskController_SaveTaskFailed_WithMsg=保存任务时发生错误：{0}
+TaskController_LoadTaskFailed_WithMsg=加载任务时发生错误：{0}
+TaskController_NoOpenProject_CannotCopyTask=当前没有打开的项目，无法复制任务。
+TaskController_SourceTaskCannotBeNull=源任务不能为null
+TaskController_DefaultTaskName=任务
+TaskController_CopySuffix=复制
+TaskController_NoOpenProject_CannotRenameTask=当前没有打开的项目，无法重命名任务。
+TaskController_TaskCannotBeNull=任务不能为null
+TaskController_TaskNameEmpty=任务名不能为空。
+TaskController_TaskNameInvalidChars=任务名 '{0}' 包含非法字符。
+TaskController_TaskNameDuplicate=任务名 '{0}' 已存在。
+TaskController_TargetDirExists=目标任务目录 '{0}' 已存在，不能重名。
+TaskController_NoOpenProject_CannotAddTask=当前没有打开的项目，无法添加任务。
+TaskController_CameraConfigMissing=任务 '{0}' 的相机配置缺失，无法获取批次大小。
+TaskController_ProductionName=产品
+TaskController_AsyncTaskExecutionFailed=异步任务执行失败
+TaskController_NoOpenProject_CannotRunTaskGroup=当前没有打开的项目，无法运行任务组。
+TaskController_TaskGroupEmpty=任务组为空。
+TaskController_TaskGroupExecutionCancelled=任务组的执行已被取消。
+TaskController_TaskGroupExecutionFailed=任务组执行失败
+TaskController_LoopAlreadyRunning=任务组循环已经在运行中。
+TaskController_LoopOperationAbnormal=循环运行异常
+TaskController_LoopAlreadyStopped=任务组循环已停止，无需重复操作。
+TaskController_StopLoopException=停止循环时发生异常
+TaskController_AcquireLoopLockTimeout=获取循环锁超时，无法更新停止状态（已尝试取消任务）
+TaskController_StartLoopRunTaskGroup=开始循环运行任务组
+TaskController_LoopRunCancelledNormally=循环运行被正常取消
+TaskController_LoopAbnormalTermination=循环异常终止
+TaskController_LoopRunStopped=任务组循环运行已停止
+TaskController_AttemptToExecuteNullTask=尝试执行空任务
+TaskController_TaskCancelled=任务 '{0}' 被取消执行
+TaskController_UnknownTaskName=未知任务
+TaskController_TaskExecutionFailed=任务 '{0}' 执行失败
+TaskController_TcpNotListening=当前TCP监听未启用，发送数据失败
+TaskController_TaskNumberNotFound=任务号不存在
+TaskController_InvalidCommandReceived=接收指令有误
+TaskController_TaskRunSuccess={0} 运行成功
+TaskController_TaskRunFailed={0} 运行失败
+TaskController_AcquireNodeCompleted={0} 取相节点完成
+TaskController_CalibrationNodeCompleted={0} 标定节点完成
+TaskController_InspectionNodeCompleted={0} 检测节点完成
+TaskController_SendResponseFailed=向客户端发送响应失败
+TaskController_GetDefectImagesFailed=获取缺陷图像失败
+TaskController_NoTaskRunAfterEventSubscriber=没有订阅 TaskRunAfterEvent 的事件处理程序
+TaskController_EventTriggerFailed=事件触发失败
+TaskController_ClientDisconnected_SkipSend=客户端已断开连接，跳过发送响应。
+TaskController_AddTask_CreateTaskDirFailed=创建任务 '{0}' 的磁盘文件夹失败：{1}
+TaskController_TaskRunning_BlockNewTask=当前有{0}任务正在运行，无法执行新任务！
+TaskController_TaskRunning_CannotTrigger=当前有任务正在运行，无法触发新任务
+TaskController_TaskRunning_CannotStartLoop=当前有任务正在运行，无法启动循环
+TaskController_TaskRunning_CannotRunGroup=当前有任务正在运行，无法运行任务组
+TaskController_TaskRunning_CannotTrigger_External=任务{0}正在运行，无法处理新的外部触发请求
+TaskController_LoopStopping_WaitTasksComplete=循环已停止，正在等待所有任务执行完成...
+TaskController_LoopRunStopped_AllTasksComplete=循环已停止，所有任务均已执行完成
+Title_OperationFailed=操作失败
+Folder_TaskConfig=任务配置
+Folder_RawImages=原图数据
+Folder_Snapshots=截图数据
+Rename_TargetExists=目标文件夹已存在: {0}
+Rename_Busy_Message=无法重命名【{0}】文件夹，操作已终止。\n\n路径：{1}\n\n原因：文件夹正被打开或被其他程序占用。\n请关闭相关文件夹窗口后重试。
+Rename_Busy_Blocked=重命名被占用阻断: {0}
+Folder_Busy=文件夹被占用: {0}
+Rename_UnknownError=重命名【{0}】时发生未知错误：{1}
+Rename_FatalRollbackFail=严重错误：重命名失败且回滚失败！请手动检查 Tasks 目录下文件夹名称。\n{0}
+Title_FatalError=致命错误
+Title_SystemError=系统错误
+TaskController_InternalTaskRunning_BlockExternal=Internal task is running, cannot trigger external task [{0}]
+TaskController_CannotDeleteRunningTask=Cannot delete task [{0}] because it is running
+# 任务模块
+log_error_task_file_delete_failed=任务文件删除失败
+log_error_node_data_link_failed=节点数据连接失败
+# TCP通信模块
+log_tcp_server_init_ip=TCP服务器初始化，使用IP地址: {0}
+log_tcp_server_not_initialized=TCP服务器未初始化
+log_tcp_server_client_already_exists=[TCP SERVER] 客户端 {0} 已存在，跳过重复记录
+log_tcp_server_client_not_exists=[TCP SERVER] 客户端 {0} 不存在，跳过断开处理
+log_tcp_server_get_ip_error=获取本机IP地址时出错: {0}
+log_tcp_server_get_preferred_ip_error=获取首选IP地址时出错: {0}
+log_tcp_server_get_ip_by_interface_error=通过网络接口获取IP地址时出错: {0}
+# 提示文本
+form_tcp_debug_tip_command_format=任务触发指令格式：SN:XXXX+T+任务序号+英文逗号+R(运行)
+form_tcp_debug_tip_command_example=例如：SN:XXXX,T1,R（触发任务1运行）
+form_tcp_debug_log_client_connected=客户端已连接
+form_tcp_debug_log_client_disconnected=客户端已断开
+form_tcp_debug_log_received_from=接收来自
+# 弹窗消息
+form_tcp_debug_msg_stop_server_first=请先停止服务器再修改端口号
+form_tcp_debug_msg_confirm_restart_server=确定要重新启用TCP服务器吗？
+form_tcp_debug_msg_confirm_stop_server=确定要停止TCP服务器吗？
+form_tcp_debug_msg_invalid_ip_format=IP地址格式错误，请输入合法的IPv4地址（例如：192.168.1.100）
+form_tcp_debug_msg_invalid_port=端口号格式错误，请输入1-65535之间的整数

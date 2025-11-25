@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="icon_about" xml:space="preserve">
+    <value>&lt;svg t="1761811996142" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1592" width="200" height="200"&gt;&lt;path d="M512 64c247.424 0 448 200.576 448 448s-200.576 448-448 448S64 759.424 64 512 264.576 64 512 64z m0 85.333333C311.701333 149.333333 149.333333 311.701333 149.333333 512s162.368 362.666667 362.666667 362.666667 362.666667-162.368 362.666667-362.666667S712.298667 149.333333 512 149.333333z m21.333333 277.333334a21.333333 21.333333 0 0 1 21.333334 21.333333v298.666667a21.333333 21.333333 0 0 1-21.333334 21.333333h-42.666666a21.333333 21.333333 0 0 1-21.333334-21.333333V448a21.333333 21.333333 0 0 1 21.333334-21.333333h42.666666z m0-170.666667a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333h-42.666666a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333h42.666666z" fill="#222429" p-id="1593"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_calibration" xml:space="preserve">
+    <value>&lt;svg t="1761615075053" class="icon" viewBox="0 0 1079 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10118" width="32" height="32"&gt;&lt;path d="M43.464798 294.571526l86.302701-81.844773 51.823413 48.758588-86.372355 82.262703 51.753758 48.758588L233.275015 310.66186l51.753759 48.758588-86.302701 81.844772 17.831712 42.628937 269.07775-269.07775L302.303245 16.368954a89.785457 89.785457 0 0 0-112.632338 8.637236L17.065506 188.695735a59.555132 59.555132 0 0 0 9.055166 90.551663z m-17.274471 675.306441a22.777226 22.777226 0 0 0 29.951704 28.419292l315.189443-99.88545-241.63363-229.095708z m1024.626896-714.034691a56.768927 56.768927 0 0 0 0-86.16339L900.013877 26.747568a64.430991 64.430991 0 0 0-90.551664 0l-109.915788 104.482688 241.633631 229.095708zM664.788518 163.689545L164.246786 638.31957l241.63363 229.095708 500.541732-474.56037z m397.034215 572.774097l-224.359159-212.726753-276.112918 261.833616 51.753759 48.758588 86.3027-81.844772 51.823414 48.758588-86.302701 81.844772 51.753758 48.758588 86.302701-81.844773 51.753758 48.758588-86.3027 81.844773 17.274471 16.368954a67.286851 67.286851 0 0 0 95.357866 7.731719l172.605401-163.689545a78.501326 78.501326 0 0 0 8.14965-105.945446z m0 0" p-id="10119"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_camera" xml:space="preserve">
+    <value>&lt;svg t="1761615541530" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12492" width="32" height="32"&gt;&lt;path d="M145.1 212.8h96.1V248h-96.1z" fill="#333333" p-id="12493"&gt;&lt;/path&gt;&lt;path d="M863.6 277H745.9c-12 0-23.2-6-29.8-16l-50.4-75.6c-6.6-10-17.8-16-29.8-16H387.8c-12 0-23.2 6-29.8 16L307.7 261c-6.6 10-17.8 16-29.8 16H160.4c-53.1 0-96.1 43.1-96.1 96.1v385.3c0 53.1 43.1 96.1 96.1 96.1h703.2c53.1 0 96.1-43.1 96.1-96.1V373.1c0-53-43-96.1-96.1-96.1zM512 783.7c-113.5 0-206-92.3-206-206 0-113.5 92.4-206 206-206 113.5 0 206 92.4 206 206s-92.5 206-206 206z m292.7-412.9c0 15.8-12.8 28.5-28.6 28.6h-0.5c-15.8 0-28.6-12.8-28.6-28.6v-0.5c0-15.8 12.8-28.6 28.6-28.6h0.5c15.8 0 28.6 12.8 28.6 28.6v0.5z" fill="#333333" p-id="12494"&gt;&lt;/path&gt;&lt;path d="M512 416.6c-89 0-161.2 72.2-161.2 161.2C350.8 666.9 423 739 512 739c89.1 0 161.2-72.1 161.2-161.2 0-89-72.1-161.2-161.2-161.2z" fill="#333333" p-id="12495"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_communication" xml:space="preserve">
+    <value>&lt;svg t="1761613786294" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11438" width="32" height="32"&gt;&lt;path d="M711.68 392.704v68.388571h20.918857c18.432 0 29.549714-3.730286 35.84-9.142857 5.851429-4.900571 9.654857-12.946286 9.654857-27.355428 0-13.897143-3.949714-20.406857-9.508571-24.356572-6.729143-4.754286-18.432-7.533714-37.302857-7.533714H711.68z" p-id="11439"&gt;&lt;/path&gt;&lt;path d="M146.285714 109.714286a73.142857 73.142857 0 0 0-73.142857 73.142857V731.428571c0 37.156571 27.648 73.508571 63.488 73.142858h750.738286c35.84 0.365714 63.488-35.986286 63.488-73.142858V182.857143a73.142857 73.142857 0 0 0-73.142857-73.142857H146.285714z m379.318857 219.428571c34.889143 0 62.025143 17.481143 78.921143 36.717714l7.460572 8.484572-37.083429 45.641143-9.508571-10.313143c-11.117714-11.922286-23.405714-19.017143-39.131429-19.017143a50.614857 50.614857 0 0 0-41.910857 20.992c-10.459429 13.897143-17.261714 35.108571-17.261714 63.268571 0 28.672 6.436571 50.176 16.530285 64.219429a49.005714 49.005714 0 0 0 41.691429 21.138286c17.92 0 32.182857-8.192 45.129143-22.966857l9.508571-10.971429 36.864 45.348571-7.021714 8.484572c-21.942857 26.404571-50.322286 41.545143-85.869714 41.545143a112.64 112.64 0 0 1-86.966857-38.912c-21.942857-25.453714-34.596571-61.878857-34.596572-106.496s12.946286-81.408 35.328-107.227429A114.176 114.176 0 0 1 525.604571 329.142857z m-134.582857 4.900572v59.977142h-72.411428v223.158858h-63.707429v-223.085715H182.857143v-60.050285h208.164571z m257.024 0h86.893715c28.306286 0 54.857143 4.973714 74.532571 19.382857 20.48 14.994286 31.670857 38.765714 31.670857 71.168 0 31.670857-11.190857 56.173714-31.012571 72.411428-19.309714 15.945143-45.494857 22.747429-73.874286 22.747429H711.68v97.426286H648.045714V334.043429zM256 877.714286a36.571429 36.571429 0 0 0 0 73.142857h512a36.571429 36.571429 0 0 0 0-73.142857h-512z" p-id="11440"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_inspection" xml:space="preserve">
+    <value>&lt;svg t="1761613529861" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4423" width="32" height="32"&gt;&lt;path d="M939 177.5c-8.6-12.7-19.6-23.6-32.4-32.4-6.3-4.3-13.1-8-20.3-11-14.3-6.1-30-9.4-46.3-9.4H183.9c-16.5 0-32.1 3.3-46.3 9.4-7.2 3-14 6.7-20.3 11-12.7 8.6-23.6 19.6-32.4 32.4-12.9 19.1-20.4 42-20.4 66.5v417.5c0 65.6 53.6 119.3 119.3 119.3h656.1c65.6 0 119.3-53.6 119.3-119.3V244.1c0.1-24.5-7.4-47.5-20.2-66.6zM810.2 542.3H671.6c-7.7 0-15.2-3-20.7-8.4L488.5 378.1 371.8 530.5c-5.6 7.4-14.3 11.7-23.6 11.7H213.7c-16.4 0-29.8-15.8-29.8-32.3 0-16.4 13.3-32.2 29.8-32.2h119.8l128.1-167.1c5.2-6.7 12.9-11 21.4-11.6 8.3-0.5 16.8 2.4 22.9 8.2l177.7 170.5h126.7c16.5 0 29.9 16 29.9 32.5-0.1 16.5-13.5 32.1-30 32.1zM690.9 835.3H333.1c-16.4 0-29.9 14.3-29.9 32s13.5 32 29.9 32h357.8c16.5 0 29.9-14.3 29.9-32-0.1-17.7-13.4-32-29.9-32z" p-id="4424"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_looprun" xml:space="preserve">
+    <value>&lt;svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 24 24"&gt;&lt;path fill="currentColor" d="M3 23q-.825 0-1.412-.587T1 21V3q0-.825.588-1.412T3 1h18q.825 0 1.413.588T23 3v18q0 .825-.587 1.413T21 23zm3.85-4H17q.825 0 1.413-.587T19 17v-3q0-.425-.288-.712T18 13t-.712.288T17 14v3H6.85l.85-.85q.3-.3.288-.7t-.288-.7q-.3-.3-.712-.312t-.713.287L3.7 17.3q-.15.15-.213.325T3.426 18t.063.375t.212.325l2.575 2.575q.3.3.713.288t.712-.313q.275-.3.288-.7t-.288-.7zm10.3-12l-.85.85q-.3.3-.288.7t.288.7q.3.3.712.312t.713-.287L20.3 6.7q.15-.15.213-.325T20.575 6t-.062-.375T20.3 5.3l-2.575-2.575q-.3-.3-.712-.288t-.713.313q-.275.3-.288.7t.288.7l.85.85H7q-.825 0-1.412.588T5 7v3q0 .425.288.713T6 11t.713-.288T7 10V7z"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_onece" xml:space="preserve">
+    <value>&lt;svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 24 24"&gt;&lt;path fill="currentColor" d="M3 23q-.825 0-1.412-.587T1 21V3q0-.825.588-1.412T3 1h18q.825 0 1.413.588T23 3v18q0 .825-.587 1.413T21 23zm3.85-4H17q.825 0 1.413-.587T19 17v-3q0-.425-.288-.712T18 13t-.712.288T17 14v3H6.85l.85-.85q.3-.3.288-.7t-.288-.7q-.3-.3-.712-.312t-.713.287L3.7 17.3q-.15.15-.213.325T3.426 18t.063.375t.212.325l2.575 2.575q.3.3.713.288t.712-.313q.275-.3.288-.7t-.288-.7zm10.3-12l-.85.85q-.3.3-.288.7t.288.7q.3.3.712.312t.713-.287L20.3 6.7q.15-.15.213-.325T20.575 6t-.062-.375T20.3 5.3l-2.575-2.575q-.3-.3-.712-.288t-.713.313q-.275.3-.288.7t.288.7l.85.85H7q-.825 0-1.412.588T5 7v3q0 .425.288.713T6 11t.713-.288T7 10V7zm-5.65 3.5v3.75q0 .325.213.538t.537.212t.538-.213t.212-.537V10q0-.425-.288-.712T12 9h-1.25q-.325 0-.537.213T10 9.75t.213.538t.537.212z"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_pause" xml:space="preserve">
+    <value>&lt;svg t="1761614179384" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1678" width="32" height="32"&gt;&lt;path d="M514 114.3c-219.9 0-398.9 178.9-398.9 398.8 0.1 220 179 398.9 398.9 398.9 219.9 0 398.8-178.9 398.8-398.9 0-219.8-178.9-398.8-398.8-398.8z m-35.6 531.5c0 32.5-26.3 58.8-58.8 58.8s-58.8-26.3-58.8-58.8V381.4c0-32.5 26.3-58.8 58.8-58.8s58.8 26.3 58.8 58.8v264.4z m188.7 0c0 32.5-26.3 58.8-58.8 58.8s-58.8-26.3-58.8-58.8V381.4c0-32.5 26.3-58.8 58.8-58.8s58.8 26.3 58.8 58.8v264.4z" fill="#0C0C0C" p-id="1679"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_play" xml:space="preserve">
+    <value>&lt;svg t="1761614147685" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1513" width="32" height="32"&gt;&lt;path d="M514 114.3c-219.9 0-398.9 178.9-398.9 398.9 0.1 219.9 179 398.8 398.9 398.8 219.9 0 398.8-178.9 398.8-398.8S733.9 114.3 514 114.3z m173 421.9L437.1 680.5c-17.7 10.2-39.8-2.6-39.8-23V368.9c0-20.4 22.1-33.2 39.8-23L687 490.2c17.7 10.2 17.7 35.8 0 46z" fill="#0C0C0C" p-id="1514"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_projectmanager" xml:space="preserve">
+    <value>&lt;svg t="1761616500780" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13881" width="32" height="32"&gt;&lt;path d="M884.8 1014.4H144c-36.8 0-67.2-30.4-67.2-67.2V209.6c0-36.8 30.4-67.2 67.2-67.2h33.6v100.8c0 36.8 30.4 67.2 67.2 67.2h538.4c36.8 0 67.2-30.4 67.2-67.2V142.4H884c36.8 0 67.2 30.4 67.2 67.2v737.6c0.8 36.8-29.6 67.2-66.4 67.2z m-150.4-456c-20-19.2-52-19.2-72 0l-180 171.2-84-80c-20-19.2-52-19.2-72 0s-20 49.6 0 68l120 113.6c20 19.2 52 19.2 72 0l216-204.8c20-18.4 20-48.8 0-68z m-52-315.2h-336c-36.8 0-67.2-30.4-67.2-67.2v-33.6C413.6 44 415.2 42.4 450.4 8.8H584C616.8 40 616 44 749.6 142.4V176c0 37.6-29.6 67.2-67.2 67.2zM514.4 76c-36.8 0-67.2 30.4-67.2 67.2 0 36.8 30.4 67.2 67.2 67.2 36.8 0 67.2-30.4 67.2-67.2 0-37.6-30.4-67.2-67.2-67.2z m0 0" fill="#333333" p-id="13882"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_replayimage" xml:space="preserve">
+    <value>&lt;svg t="1761616855009" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="26027" width="32" height="32"&gt;&lt;path d="M783.317333 154.389333l0.106667 0.32 0.064 0.149334 0.021333 0.106666 0.746667 2.410667a42.453333 42.453333 0 0 1 1.344 8.938667l0.021333 0.853333v0.853333a42.368 42.368 0 0 1-6.208 22.314667 42.88 42.88 0 0 1-2.261333 3.349333l-0.576 0.746667-0.576 0.725333a42.581333 42.581333 0 0 1-2.517333 2.837334l-0.64 0.64-0.661334 0.64a42.304 42.304 0 0 1-6.101333 4.736l-3.114667 1.834666-3.328 1.578667-111.082666 47.146667a42.666667 42.666667 0 0 1-36.693334-76.970667l3.349334-1.578667 15.786666-6.741333A362.346667 362.346667 0 0 0 512 149.333333C311.701333 149.333333 149.333333 311.701333 149.333333 512s162.368 362.666667 362.666667 362.666667 362.666667-162.368 362.666667-362.666667c0-70.656-20.202667-138.24-57.642667-196.266667a42.666667 42.666667 0 1 1 71.701333-46.272A446.058667 446.058667 0 0 1 960 512c0 247.424-200.576 448-448 448S64 759.424 64 512 264.576 64 512 64c52.416 0 103.552 9.045333 151.573333 26.304l-7.04-16.576a42.666667 42.666667 0 0 1 76.970667-36.672l1.578667 3.328 47.146666 111.082667 0.725334 1.792 0.256 0.810666 0.149333 0.341334 0.042667 0.213333-0.085334-0.213333z m-345.621333 199.488c2.517333 0.426667 5.013333 1.088 7.402667 2.005334 34.986667 13.44 71.082667 30.72 108.309333 51.84a1013.504 1013.504 0 0 1 96.810667 62.421333l15.616 11.605333a37.653333 37.653333 0 0 1-0.085334 60.096c-38.698667 29.12-76.16 53.952-112.341333 74.453334a819.2 819.2 0 0 1-92.416 44.970666l-15.893333 6.357334a37.653333 37.653333 0 0 1-50.752-29.013334A782.741333 782.741333 0 0 1 384 512c0-37.056 2.666667-74.133333 8-111.189333l2.432-15.893334a37.653333 37.653333 0 0 1 43.264-31.04z" fill="#000000" p-id="26028"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <data name="icon_true" xml:space="preserve">
+    <value>&lt;svg t="1762247402574" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5856" width="32" height="32"&gt;&lt;path d="M883.2 247.488c-17.088-17.088-44.8-17.088-59.712 0L409.6 665.6 200.512 460.8c-17.024-17.088-44.8-17.088-59.712 0-17.088 17.088-17.088 44.8 0 59.712L379.712 755.2c8.576 8.512 19.2 12.8 29.888 12.8a42.112 42.112 0 0 0 29.888-12.8l443.712-448a41.216 41.216 0 0 0 0-59.712z" p-id="5857"&gt;&lt;/path&gt;&lt;/svg&gt;</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

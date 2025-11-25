@@ -1,0 +1,548 @@
+###########窗口 or 通用###################
+#通用
+INFO=INFO
+WARN=WARN
+DEBUG=DEBUG
+ERROR=ERROR
+FATAL=FATAL
+Warning = Warning
+Error = Error
+Common_Tip=Tip
+
+# 主窗口
+MainForm_tabProductDisplay=Product
+MainForm_tabPage2=Defect
+MainForm_groupBox1=Production Data
+MainForm_lblTask=Task Manage
+MainForm_lblCamera=Acquire
+MainForm_lblCalibration=Calibration
+MainForm_lblInspection=Inspection
+MainForm_lblOneceRun=OneceRun
+MainForm_lblLoopRun=LoopRun
+MainForm_lblCommunication=Trigger
+MainForm_lblReplayImage=ReplayImage
+MainForm_lblProduction=Production
+ProductionRecord_ProductionTime=Time
+ProductionRecord_Status=Status
+ProductionRecord_NoData=No production data available.
+
+#创建项目
+WinProjectNew_btnCancel=Cancel
+WinProjectNew_lblProjectName=Project Name
+WinProjectNew_lblProjectPath=Project Path
+SaveProject=Save Project
+CreateProject=Create Project
+Save=Save
+Create=Create
+
+#主窗口—日志板块
+MainForm_LoggroupBox=Log
+MainForm_Infocheckbox=INFO
+MainForm_Warncheckbox=WARN
+MainForm_Debugcheckbox=DEBUG
+MainForm_Errorcheckbox=ERROR
+MainForm_Fatalcheckbox=FATAL
+MainForm_Clearbutton=Clear
+
+#主窗口—菜单
+TitleBar_Project = Project
+TitleBar_NewProject = New Project
+TitleBar_OpenProject = Open Project
+TitleBar_History = History
+TitleBar_Save = Save Project
+TitleBar_Exit = Exit
+TitleBar_Tool = Tool
+TitleBar_DeviceManagement = Device Management
+TitleBar_Communication = Trigger
+TitleBar_Options = Options
+TitleBar_Display = Display
+TitleBar_Show_record_configuration = Show_record_configuration
+TitleBar_Help = Help
+TitleBar_UserManual = User Manual 
+TitleBar_About = About
+TitleBar_Language = Language
+TitleBar_Current = Current
+Chinese = 中文
+English = English
+Example = Example
+TitleBar_ProjectFile=Project File
+TitleBar_LoadProject=Load Project
+TitleBar_ProjectSavedSuccessfully=Project saved successfully!
+TitleBar_ProjectSavedFailed=Project saved failed!
+TitleBar_NeedSaveProject=The project path does not exist, please save the project!
+TitleBar_Exitapplication=Are you sure you want to exit the application?
+
+#工具栏
+ToolBar_Production=Production
+ToolBar_Replay=Replay
+ToolBar_SimulationRun=SimulationRun
+ToolBar_Ready=Ready
+ToolBar_FailedToStartLoopOperation=Failed to start loop operation!
+ToolBar_PleaseSelectTask=Please select the task first before running it!
+ToolBar_OneceRunFailed=Single run failure!
+ToolBar_StopLoopRunException=Stop loop exception!
+ToolBar_StopLoopRunFailed=Stop loop failed!
+ToolBar_StopMonitoring=Stop monitoring!
+ToolBar_StartMonitoring=Start monitoring!
+ToolBar_PleaseSelectedTaskOpenCamera=Please select a task before setting up imaging!
+ToolBar_PleaseConfigCamera=There are currently no cameras configured. Do you want to jump to the camera configuration page!
+ToolBar_ConfigCamera=Camera not configured
+ToolBar_PleaseSelectedTaskOpenCalibration=Please select a task before opening the calibration window!
+ToolBar_PleaseSelectedTaskOpenInspection=Please select a task before opening the inspection window!
+ToolBar_SelectTask=No task selected!
+ImageSave_BatchCompleteWithFailFmt=[ImageSave] Batch completed (including failures): Task={0}, Category={1}, Total={2}, Dir={3}
+ImageSave_BatchCompleteFmt=[ImageSave] Batch complete: Task={0}, Category={1}, Total={2}, Dir={3}
+ImageSave_EnqueuePrepErrorFmt=An error occurred during the screenshot entry preparation phase: {0}
+ImageSave_SaveFailedFmt=[ImageSave] Save failed: Reason={0} | Attempted path={1}
+ImageSave_SaveFailedFmt=[ImageSave] Save failed: Reason={0} | Attempted path={1}
+Snapshot_GenerateFailed_NullImage=Snapshot_GenerateFailed_NullImage=
+
+#任务管理窗口
+WinTaskManage_WinTaskSetting=Task Management
+WinTaskManage_btnAddTask=AddTask
+WinTaskManage_btnRemoveTask=RemoveTask
+newTask = newTask
+ID = ID
+TaskName = TaskName
+CreateTime = CreateTime
+Status = Status
+Option = Option
+Current = Current
+TaskManage_AddTaskFailedFmt=Adding a new task failed: {0}
+TaskManage_NameEmpty=The task name cannot be empty.
+TaskManage_NameInvalidChars=The task name contains illegal characters.
+TaskManage_NameDuplicate=Task names cannot be duplicated.
+TaskManage_Action_Rename=Rename
+TaskManage_RenameFailedFmt=Rename failed: {0}
+TaskManage_DeleteCurrentConfirmTitle=Are you sure you want to delete the current task?
+TaskManage_DeleteConfirmTitle=Confirm deletion
+TaskManage_DeleteCurrentConfirmMessageFmt={0}\n\nNote: This is the currently executing task.
+TaskManage_DeleteConfirmMessageFmt=Are you sure you want to delete task "{0}"?
+TaskManage_copyTask=copyTask
+TaskManage_copyTaskfail=Copy failed:
+DisplayController_ResubscribeFailed=Resubscribing to display controller events failed
+TaskManage_AutoSaveSuccessFmt=【{0}】Task: {1}, auto-save successful.
+
+#关于窗口
+WinAbout_pageHeader_About =About InsWorks
+WinAbout_shield_Ins=https://www.insnex.com
+WinAbout_shield_License=Apache1.0
+WinAbout_shield_Project=V1.1.0
+WinAbout_shield_suppord=Technical Support Email
+WinAbout_shield_Fork=Fork
+WinAbout_shield_Donwload=Donwload
+WinAbout_shield_C=100%
+
+# 设备管理
+log_warning_invalid_camera_config = Invalid camera config, failed to load camera information
+log_error_camera_search_failed = Camera type "{0}" search failed: {1}
+log_error_cannot_create_camera_instance = Failed to create instance for type "{0}"
+log_error_camera_restore_state_failed = Camera "{0}" failed to restore state: {1}
+log_error_camera_init_connect_failed = Camera "{0}" failed to connect: {1}
+log_error_camera_init_load_config_failed = Camera "{0}" failed to load config: {1}
+
+msg_warning_no_image_captured = No image was captured, check camera config!
+log_warning_no_image_captured = Camera "{0}": No image was capture, there may be problems with camera config
+msg_error_image_capture_failed = Image capure failed: {0}
+log_error_image_capture_failed = Camera "{0}": Image capture failed: {1}
+msg_failed_connect_camera = Camera "{0}": Failed to connect to camera
+dlg_cam_conf_menu_config = Config
+dlg_cam_conf_menu_loadconfig = Load
+dlg_cam_conf_menu_exportconfig = Export
+
+#通信界面
+WinTcpCommunicationDebug_btnTcpReStart=ReService 
+WinTcpCommunicationDebug_labelTcpIP=IP:
+WinTcpCommunicationDebug_labelTcpPort=Port:
+WinTcpCommunicationDebug_TcpBtnReceiveClear=Clear
+WinTcpCommunicationDebug_TcpBtnSend=Send
+WinTcpCommunicationDebug_TcpBtnSendClear=Clear
+WinTcpCommunicationDebug_TcpBtnStop=Stop
+WinTcpCommunicationDebug_TcpGroupLog=Log
+WinTcpCommunicationDebug_TCPGroupresave=Receive Box
+WinTcpCommunicationDebug_TCPGroupsend=Send Box
+WinTcpCommunicationDebug_TCPGrouptest=Test
+WinTcpCommunicationDebug_TCPHeader=Communication Settings
+
+#标定窗口
+WinCalibration_btnRestore=Restore
+WinCalibration_btnSave=Save
+标定节点=-Calibration Node
+
+#检测窗口
+WinInspection_btnRestore=Restore
+WinInspection_btnSave=Save
+检测节点=-Inspection Node
+
+#工具选项窗口
+WinOption_button1=Save
+WinOption_button2=Restore
+WinOption_label1=Raw
+WinOption_label2=Format
+WinOption_label3=Result
+WinOption_label4=Location
+WinOption_label5=Format
+WinOption_label6=Location
+WinOption_label7=Result
+WinOption_label8=Snapshot
+WinOption_pageheaderOption=Options
+WinOption_tabPage1=Settings
+WinOption_YTOpenFloder=Open
+WinOption_JTOpenFloder=Open
+WInOption_WireEvents_savetoproj=Saved to project
+WInOption_WireEvents_savefail=Save failed
+WInOption_restored_save=Default settings have been restored and saved.
+WInOption_restored_savefail=Restore default failed
+WinOption_PickDirInto_select=Select the root directory for saving images.
+OpenDir_Failed=Unable to open directory: {0}
+Project_Save_PartialImageDirCreateFailed=Settings have been saved, but pre-creation of partial image storage directory failed: {0}
+Project_Save_Failed=Project saving failed: {0}
+
+#UCTOOLBar
+Status_Ready=就绪
+SaveImage=存图
+Camera_Connected=已连接
+Camera_Disconnected=掉线
+
+#显示结果窗口
+UCProductDisplaystructure_btnRefresh=Confirm Refresh
+UCProductDisplaystructure_lbColumns=Number of Columns
+UCProductDisplaystructure_lbLines=Number of Rows
+UCProductDisplaystructure_pHLayoutsettings=Layout Settings
+
+#绑定节点窗口
+WProductDisplaybind_btnRecordBind=Confirm Display
+WProductDisplaybind_lbNodeRecord=Node/Record
+WProductDisplaybind_lbTaskName=Task
+WProductDisplaybind_pageHeader1=Display Binding Page
+WProductDisplaybind_lbRecordDisplayName=Display Name
+
+
+# 产品显示相关描述
+ProductDisplay_UnboundDescription=This display area is not bound to any data
+ProductDisplay_RefreshedDescription=Data is up to date
+ProductDisplay_NotRefreshedDescription=Data may not be up to date
+ProductDisplay_BoundStatus = Bound
+ProductDisplay_UnboundStatus = Unbound
+ProductDisplay_BindingStatusTip = Binding status: {0}
+ProductDisplay_RefreshedStatus = Refreshed
+ProductDisplay_NotRefreshedStatus = Not Refreshed
+ProductDisplay_RefreshStatusTip = Refresh status: {0}
+ProductDisplay_ProductionDisplay = Production display​
+ProductDisplay_CustomLayout = Custom Layout
+Menu_OpenDisplayBindingInterface = Open Display Binding Interface
+Menu_Unbind = Unbind
+
+
+#仿图窗口
+WinReplay_btnContinueRun=Continue Running
+WinReplay_btnLoadImage=Load
+WinReplay_btnNowTask=Task
+WinReplay_btnOneRun=Single-Step Run
+WinReplay_labImageFolder=Image Folder
+WinReplay_labTime=Time Interval(s)
+WinReplay_ReplayText=Current Task
+WinReplay_tabHeader1=Image Simulation Settings
+Replay_Btn_Stop=Stop
+WinReplay_labRunCount=Run Count
+
+
+###########Message or Log###################
+# 通用消息（英文版本）
+Message_RenameFailed=Rename failed: {0}
+Message_PleaseSelectATaskFirst = Please select a task first
+Message_NoProjectLoaded = No project loaded
+Message_NoTaskGroupFound = No task group found
+Message_TaskNotFound = Task not found: {0}
+Message_TaskExecutionFailed = Task execution failed
+Message_ExceptionOccurredWhileExecutingTask = Exception occurred while executing task: {0}
+Message_TaskCompletedSuccessfully = Task completed successfully, {0} inspection records found
+Message_FailedToRefreshRecordList = Failed to refresh record list: {0}
+Message_PleaseSelectATaskName = Please select a task name
+Message_PleaseSelectANodeName = Please select a node name
+Message_PleaseSelectARecordName = Please select a record name
+Message_NoBoundDisplayImagePleaseRightClickToBind = No bound display image, please right-click to bind
+Message_FailedToInitializeInterfaceControls = Failed to initialize interface controls: {0}
+Message_Label1ControlIsNullCannotBindDoubleClickEvent = label1 control is null, cannot bind double-click event
+Message_TxtRenameControlIsNullCannotBindEvents = txtRename control is null, cannot bind events
+Message_FailedToInitializeEventHandling = Failed to initialize event handling: {0}
+Message_FailedToStartRenaming = Failed to start renaming
+Message_RenameControlsNotInitialized = Rename controls not initialized: txtRename={0}, label1={1}
+Message_FailedToFinishRenaming = Failed to finish renaming
+Message_RenameCancelledOrNameUnchanged = Rename cancelled or name unchanged
+Message_FailedToUpdateBindingStatus = Failed to update binding status: {0}
+Message_FailedToUpdateRefreshStatus = Failed to update refresh status: {0}
+Message_AreYouSureYouWantToUnbindTheCurrentDisplay = Are you sure you want to unbind the current display?\nIt will return to unbound state after unbinding.
+Message_ConfirmUnbinding = Confirm Unbinding
+Message_BindingHasBeenSuccessfullyCancelled = Binding has been successfully cancelled!
+Message_FailedToUnbind = Failed to unbind: {0}
+Message_Error = Error
+Message_BindingSuccessful = Binding successful!
+Message_BindingFailed = Binding failed: {0}
+Message_CannotGetParentContainerControlInformation = Cannot get parent container control information
+Message_FailedToHighlightDisplayControl = Failed to highlight display control: {0}
+Message_FailedToCancelHighlightDisplay = Failed to cancel highlight display: {0}
+Message_DisplayControllerInitializationFailed = DisplayController initialization failed
+Message_FailedToLoadBindingConfigurations = Failed to load binding configurations
+Message_FailedToInitializeCacheCleanupTimer = Failed to initialize cache cleanup timer
+Message_CacheCleanupFailed = Cache cleanup failed
+Message_FailedToGetCurrentLayoutConfiguration = Failed to get current layout configuration
+Message_NumberOfRowsAndColumnsMustBeBetween1And10 = Number of rows and columns must be between 1 and 10
+Message_FailedToCreateDisplayLayout = Failed to create display layout
+Message_ControlIdCannotBeNull = ControlId cannot be null
+Message_TaskNameCannotBeNull = TaskName cannot be null
+Message_NodeNameCannotBeNull = NodeName cannot be null
+Message_RecordNameCannotBeNull = RecordName cannot be null
+Message_FailedToBindControl = Failed to bind control
+Message_FailedToUnbindControl = Failed to unbind control
+Message_FailedToGetControlBindingInformation = Failed to get control binding information - ControlId: {0}
+Message_FailedToGetAllBindingConfigurations = Failed to get all binding configurations
+Message_FailedToGetRecordData = Failed to get record data - Task: {0}, Node: {1}, Record: {2}
+Message_NoProjectOrTaskGroupIsCurrentlyLoaded = No project or task group is currently loaded
+Message_RecordNotFound = Record not found: {0}
+Message_FailedToLoadRecordFromTaskNode = Failed to load record from task node: {0}
+Message_NoProjectIsCurrentlyLoaded = No project is currently loaded
+Message_FailedToGetTaskList = Failed to get task list
+Message_FailedToGetRecordNameList = Failed to get record name list - Task: {0}, Node: {1}
+Message_CannotSubscribeToNodeEventsProjectOrTaskGroupIsNull = Cannot subscribe to node events, project or task group is null
+Message_FailedToSubscribeToNodeEvents = Failed to subscribe to node events
+Message_TaskRunEventSubscriptionCompleted = Task run event subscription completed
+Message_FailedToSubscribeToTaskRunEvents = Failed to subscribe to task run events
+Message_FailedToSubscribeToProjectEvents = Failed to subscribe to project events
+Message_FailedToHandleProjectChangeEvent = Failed to handle project change event
+Message_FailedToHandleNodeEvent = Failed to handle node event: {0}
+Message_FailedToHandleTaskRunEvent = Failed to handle task run event
+Message_FailedToTriggerBindingUpdateEvent = Failed to trigger binding update event
+Message_FailedToCreateImageCopy = Failed to create image copy
+Message_FailedToResetDisplayController = Failed to reset DisplayController
+Message_FailedToUnsubscribeFromEvents = Failed to unsubscribe from events
+Message_ProjectNotLoadedCannotLoadDisplayConfiguration = Project not loaded, cannot load display configuration!
+Message_LoadFailed = Load Failed
+Message_FailedToParseConfigurationFile = Failed to parse configuration file: {0}
+Message_FailedToCreateDefaultConfigurationFile = Failed to create default configuration file: {0}
+Message_AnUnhandledErrorOccurredWhileLoadingDisplayConfiguration = An unhandled error occurred while loading display configuration
+Message_InsufficientPermissionsToCreateDirectory = Insufficient permissions to create directory: {0}
+Message_FailedToCreateDirectory = Failed to create directory: {0}
+Message_ErrorOccurredWhileCheckingDirectory = Error occurred while checking directory
+Message_ConfigurationObjectIsNullUsingDefaultConfiguration = Configuration object is null, using default configuration
+Message_FailedToWriteConfigurationFile = Failed to write configuration file: {0}
+Message_AnUnhandledErrorOccurredWhileSavingDisplayConfiguration = An unhandled error occurred while saving display configuration
+Message_NumberOfRowsAndColumnsMustBeGreaterThan0 = Number of rows and columns must be greater than 0
+Message_NumberOfRowsAndColumnsCannotExceed5 = Number of rows and columns cannot exceed 5
+Message_OperationFailed = Operation failed: {0}
+Message_DefectImageAreaInitialState = Defect Image Area (Initial State)
+Message_FailedToInitializeDefectDisplayPanel = Failed to initialize defect display panel
+Message_DefectImageTitleInitializationFailed = Defect Image Title (Initialization Failed)
+Message_DetectedDefectImages = Detected Defect Images
+Message_FailedToAddDefectImages = Failed to add defect images
+Message_FailedToLoadDefectImages = Failed to load defect images
+Message_FailedToOpenLargeImageViewer = Failed to open large image viewer
+Message_DefectImageDetails = Defect Image Details
+Message_FailedToReleaseResourcesWhenClosingLargeImageViewer = Failed to release resources when closing large image viewer
+Message_InsufficientMemoryWhenOpeningLargeImageViewer = Insufficient memory when opening large image viewer
+Message_FailedToCloseLargeImageViewer = Failed to close large image viewer
+Message_FailedToGenerateLayout = Failed to generate layout
+Message_FailedToAddChildControlToPosition = Failed to add child control to position ({0}, {1})
+Message_FailedToClearLayout = Failed to clear layout
+Message_ControlInBindingConfigurationDoesNotExist = Control in binding configuration does not exist: {0}
+Message_FailedToUpdateChildControlBinding = Failed to update child control binding: {0}
+Message_DetectedDefectImagesCount = Detected Defect Images ({0} images)
+Message_FailedToProcessRecordUpdateEvent = Failed to process record update event: {0}
+Message_FailedToUpdateDefectImageDisplay = Failed to update defect image display
+Message_FailedToHandleBindingUpdateEvent = Failed to handle binding update event: {0}
+Message_FailedToHandleTaskCompletionEvent = Failed to handle task completion event
+Message_FailedToHighlightUnboundControls = Failed to highlight unbound controls: {0}
+Message_FailedToAdjustControlPositions = Failed to adjust control positions: {0}
+Message_TaskCompletedSuccessfullyRecordsRefreshed=Task completed successfully, records refreshed
+Message_PleaseSelectANode=Please select a node
+Message_RenameSuccessful=Rename successful!
+Message_BindingSuccessful=Binding successful!
+Message_UnbindingFailed=Unbinding failed: {0}
+Message_FailedToOpenBindingWindow=Failed to open binding window: {0}
+Message_BindingParametersCannotBeEmpty=Binding parameters cannot be empty
+
+#仿图页面
+Replay_Table_Column_Id=ID
+Replay_Table_Column_Guid=GUID
+Replay_Table_Column_SaveTime=Save Time
+Replay_Table_Column_Quantity=Quantity
+Replay_Table_Column_Status=Status
+Replay_Table_GroupId={0}
+Replay_Status_NotRun=Not Run
+Replay_Table_Column_StdStatus=StdStatus
+Replay_Table_Column_CurrentGroup=Current Group
+Replay_Dialog_SelectFolderDesc=Please select image folder
+Replay_Msg_InvalidFolderPath=Please select or enter a valid image folder path
+Replay_Msg_FolderNotExist=Image folder does not exist
+Replay_Msg_NoImagesFound=No image files found in this folder
+Replay_Msg_SelectTaskFirst=Please select a task first
+Replay_Msg_InvalidImageNaming=Image naming does not meet requirements, cannot group! Please select folder with images named like:\nExample:{guid}/{sn}_{yyyyMMddHHmmssfff}_{expTag}_{status}_1.{ext}.
+Replay_Msg_InvalidTime=Please enter a valid time interval
+Replay_Log_LoadPathFailed=Failed to load image paths
+Replay_Log_GetBatchSizeFailed=Failed to get batch size
+Replay_Log_ImagesLoaded=Loading completed, total {0} images found, divided into {1} groups.
+Replay_Log_ParsePathError=Error parsing image path: {0}
+Replay_Log_SingleStepCompleted=Single-step run completed, total time: {0} ms
+Replay_Log_ContinueRunRoundCompleted=Completed one group, time taken: {0} ms
+Replay_Log_SingleStepFailed=Single-step run failed
+Replay_Log_ContinuousStopped=Continuous run stopped
+Replay_Log_GuidCompleted=GUID: {0} execution completed
+Replay_Log_WaitNextRound=Waiting {0} ms before next round
+Replay_Log_ContinuousInterrupted=Continuous run interrupted (incomplete round)
+Replay_Log_ContinuousFailed=Continuous run failed
+Replay_Log_LoadImageFailed=Failed to load image: {0}
+Replay_Msg_InvalidRunCount=Please enter a valid run count
+#节点窗口
+tolb_save_tip=Do you want to save the current ToolBlock?
+tolb_save_confiem=Save Confirmation
+tableParams_column_name=Name
+tableParams_column_type=Type
+tableParams_column_value=Value
+tableParams_column_btns=Operation
+tolb_save_success=Save Successfully
+tolb_save_failed=Save Failed
+tolb_save_fail=Save Failed : {0}
+tolb_save_path=Data has been successfully saved to :  {0}
+tolb_save_error=An error occurred while saving :  {0}
+tolb_restore_tip=Tip
+tolb_restore_error=Error
+tolb_restore_success=ToolBlock has restored！
+tolb_restore_fail=Restore Failed : {0}
+tolb_param_select_tip=Please select a type
+tolb_param_input_tip1=Please enter a name
+tolb_param_input_tip2=This name already exists, please use a different name.
+tolb_param_new_success=Added successfully
+tolb_param_new_fail=Failed to add：{0}
+tolb_param_save_success=Save parameters and sync to TookBlock！
+tolb_param_save_failed=An error occurred while saving: {0}
+tolb_param_edit_value_update=The value of {0} has been updated
+tolb_param_edit_value_fail=Failed to edit value：{0}
+tolb_param_edit_value_tip1=Value cannot be empty
+tolb_param_edit_value_tip2=Unable to determine object type
+tolb_param_edit_value_tip3=The value '{0}' cannot be converted to type '{1}'
+tolb_param_edit_value_tip4=Cannot find key '{0}'
+tolb_param_edit_name_tip1=Variable name cannot be empty
+tolb_param_edit_name_tip2=The variable name '{0}' already exists, please use a different name
+tolb_param_edit_name_success=Variable name updated successfully
+tolb_param_edit_name_fail=Failed to update variable name: {0}
+tolb_param_delete_tip=Are you sure you want to delete '{0}'?？
+tolb_param_delete_confirm=Confirm deletion
+tolb_param_delete_success=Deleted successfully
+tolb_param_delete_fail=Deletion failed：{0}
+
+#项目
+ProjectController_EnterName=Please enter the project name!
+ProjectController_ChooseDirectory=The current selected directory is not empty. Please choose an empty directory to create!
+ProjectController_ProjectAlreadyExists=The current project file has been created. Please select an empty directory to create it!
+
+#TaskManage
+Folder_TaskConfig=Task configuration
+Folder_RawImages=Original image data
+Folder_Snapshots=Screenshot data
+Rename_SaveDir_RollbackStart=Renaming the image storage directory failed; rolling back the task configuration directory... Error: {0}
+Rename_TaskConfig_Rollback_Success=Task configuration directory rollback successful
+Rename_FatalRollbackFail=Critical error: Renaming failed and rollback failed! Please manually check the folder names in the Tasks directory. \n{0}
+Title_FatalError=fatal error
+Rename_TargetExists=The target folder already exists: {0}
+Rename_Busy_Message=Unable to rename folder [{0}], operation terminated. Path: {1} Reason: The folder is currently open or in use by another program. Please close the relevant folder window and try again.
+Title_OperationFailed=Operation failed
+Rename_Busy_Blocked=Rename is blocked due to being occupied: {0}
+Folder_Busy=Folder in use: {0}
+Rename_UnknownError=An unknown error occurred while renaming [{0}]: {1}
+Title_SystemError=System error
+#TaskController
+TaskController_TaskIsRunning_SkipInGroup=The task has been skipped.
+TaskController_TaskIsRunning=Task is running
+TaskController_NoOpenProject_CannotDeleteTask=There are currently no open projects, so tasks cannot be deleted.
+TaskController_TaskNotInProject_CannotDelete=The specified task does not exist in the current project and cannot be deleted.
+TaskController_SaveTaskFailed_WithMsg=An error occurred while saving the task: {0}
+TaskController_LoadTaskFailed_WithMsg=An error occurred while loading the task: {0}
+TaskController_NoOpenProject_CannotCopyTask=There are currently no open projects, so tasks cannot be copied.
+TaskController_SourceTaskCannotBeNull=The source task cannot be null
+TaskController_DefaultTaskName=Task
+TaskController_CopySuffix=Copy
+TaskController_NoOpenProject_CannotRenameTask=There are currently no open projects, so the task cannot be renamed.
+TaskController_TaskCannotBeNull=The task cannot be null
+TaskController_TaskNameEmpty=The task name cannot be empty.
+TaskController_TaskNameInvalidChars=The task name '{0}' contains invalid characters.
+TaskController_TaskNameDuplicate=The task name '{0}' already exists.
+TaskController_TargetDirExists=The target task directory '{0}' already exists and cannot have a duplicate name.
+TaskController_NoOpenProject_CannotAddTask=There are currently no open projects, so tasks cannot be added.
+TaskController_CameraConfigMissing=The camera configuration for task '{0}' is missing, cannot get batch size.
+TaskController_ProductionName=Product
+TaskController_AsyncTaskExecutionFailed=Asynchronous task execution failed
+TaskController_NoOpenProject_CannotRunTaskGroup=There are currently no open projects, so the task group cannot be run.
+TaskController_TaskGroupEmpty=The task group is empty.
+TaskController_TaskGroupExecutionCancelled=The execution of the task group has been cancelled.
+TaskController_TaskGroupExecutionFailed=Task group execution failed
+TaskController_LoopAlreadyRunning=The task group loop is already running.
+TaskController_LoopOperationAbnormal=Abnormal loop operation
+TaskController_LoopAlreadyStopped=The task group loop has stopped, no need to repeat the operation.
+TaskController_StopLoopException=An exception occurred when stopping the loop
+TaskController_AcquireLoopLockTimeout=Timeout when acquiring the loop lock, unable to update the stop status (task cancellation has been attempted)
+TaskController_StartLoopRunTaskGroup=Start running the task group in a loop
+TaskController_LoopRunCancelledNormally=The loop operation was canceled normally
+TaskController_LoopAbnormalTermination=Abnormal loop termination
+TaskController_LoopRunStopped=Task group loop run has stopped
+TaskController_AttemptToExecuteNullTask=Attempt to execute null task
+TaskController_TaskCancelled=Task '{0}' has been cancelled
+TaskController_UnknownTaskName=Unknown Task
+TaskController_TaskExecutionFailed=Task '{0}' execution failed
+TaskController_TcpNotListening=TCP listening is not enabled currently, failed to send data
+TaskController_TaskNumberNotFound=Task number does not exist
+TaskController_InvalidCommandReceived=Invalid command received
+TaskController_TaskRunSuccess={0} run successfully
+TaskController_TaskRunFailed={0} run failed
+TaskController_AcquireNodeCompleted={0} Acquire Node Completed
+TaskController_CalibrationNodeCompleted={0} Calibration Node Completed
+TaskController_InspectionNodeCompleted={0} Inspection Node Completed
+TaskController_SendResponseFailed=Failed to send response to client
+TaskController_GetDefectImagesFailed=Failed to get defect images
+TaskController_NoTaskRunAfterEventSubscriber=No event handler subscribed to TaskRunAfterEvent
+TaskController_EventTriggerFailed=Event trigger failed
+TaskController_ClientDisconnected_SkipSend=The client has disconnected, skip sending response.
+TaskController_AddTask_CreateTaskDirFailed=Failed to create the disk folder for task '{0}': {1}
+TaskController_TaskRunning_BlockNewTask=There is {0} task running currently, cannot execute new tasks!
+TaskController_TaskRunning_CannotTrigger=There are tasks running currently, cannot trigger new tasks.
+TaskController_TaskRunning_CannotStartLoop=There are tasks running currently, cannot start loop.
+TaskController_TaskRunning_CannotRunGroup=There are tasks running currently, cannot run task group.
+TaskController_TaskRunning_CannotTrigger_External=Task '{0}' is running currently, cannot process new external trigger requests.
+TaskController_LoopStopping_WaitTasksComplete=Loop has stopped, waiting for all tasks to complete...
+TaskController_LoopRunStopped_AllTasksComplete=Loop has stopped, all tasks have been completed.
+Title_OperationFailed=Operation Failed
+Folder_TaskConfig=Task Configuration
+Folder_RawImages=Raw Image Data
+Folder_Snapshots=Snapshot Data
+Rename_TargetExists=Target folder already exists: {0}
+Rename_Busy_Message=Failed to rename [{0}] folder, operation terminated.\n\nPath: {1}\n\nReason: The folder is open or occupied by another program.\nPlease close related folder windows and try again.
+Rename_Busy_Blocked=Rename blocked due to occupied folder: {0}
+Folder_Busy={0} folder is occupied
+Rename_UnknownError=Unknown error occurred while renaming [{0}]: {1}
+Rename_FatalRollbackFail=Critical error: Rename failed and rollback failed! Please manually check the folder names in the Tasks directory.\n{0}
+Title_FatalError=Fatal Error
+Title_SystemError=System Error
+TaskController_InternalTaskRunning_BlockExternal=Internal task is running, cannot trigger external task [{0}]
+TaskController_CannotDeleteRunningTask=Cannot delete task [{0}] because it is running
+# Task Module
+log_error_task_file_delete_failed=Failed to delete task file
+log_error_node_data_link_failed=Failed to link node data
+# TCP Communication Module
+log_tcp_server_init_ip=TCP server initialized, using IP address: {0}
+log_tcp_server_not_initialized=TCP server is not initialized
+log_tcp_server_client_already_exists=[TCP SERVER] Client {0} already exists, skip duplicate record
+log_tcp_server_client_not_exists=[TCP SERVER] Client {0} does not exist, skip disconnect processing
+log_tcp_server_get_ip_error=Error getting local IP address: {0}
+log_tcp_server_get_preferred_ip_error=Error getting preferred IP address: {0}
+log_tcp_server_get_ip_by_interface_error=Error getting IP address via network interface: {0}
+# Tip Text
+form_tcp_debug_tip_command_format=Task trigger command format: SN:XXXX+T+Task No.+English comma+R(Run)
+form_tcp_debug_tip_command_example=Example: SN:XXXX,T1,R (Trigger Task 1 to run)
+form_tcp_debug_log_client_connected=Client connected
+form_tcp_debug_log_client_disconnected=Client disconnected
+form_tcp_debug_log_received_from=Received from
+# Popup Messages
+form_tcp_debug_msg_stop_server_first=Please stop the server first before modifying the port number
+form_tcp_debug_msg_confirm_restart_server=Are you sure you want to restart the TCP server?
+form_tcp_debug_msg_confirm_stop_server=Are you sure you want to stop the TCP server?
+form_tcp_debug_msg_invalid_ip_format=Invalid IP address format. Please enter a valid IPv4 address (e.g., 192.168.1.100)
+form_tcp_debug_msg_invalid_port=Invalid port number format. Please enter an integer between 1 and 65535
