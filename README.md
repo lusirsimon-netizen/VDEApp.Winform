@@ -131,7 +131,7 @@ VDEApp (Visual Detection Engine Application) 是一个专业的工业视觉检�
 
 ##### 1、商用试用版
 
-点击InsWorks系列软件官网（https://software.insnex.com/home），根据图片步骤申请获取授权码。
+点击[InsWorks系列软件官网](https://software.insnex.com/home)，根据图片步骤申请获取授权码。
 
 ![](Screenshots/SQM_1.png)
 
@@ -897,9 +897,7 @@ VDEApp 支持多种方式的扩展开发。
 
 ```csharp
 using VDEApp.Devices.Cameras;
-using VDEApp.Devices.Attributes;
 
-[Camera(Vendor = InsCameraVendor.Custom, Type = InsCameraType.Area2D)]
 public class MyCustomCamera : ICamera
 {
     public string Name { get; set; }
@@ -920,64 +918,7 @@ public class MyCustomCamera : ICamera
         IsConnected = false;
     }
 
-    public Image GrabImage()
-    {
-        // 实现图像采集逻辑
-        // ...
-        return capturedImage;
-    }
-
     // 实现其他 ICamera 接口方法...
-}
-```
-
-#### 注册自定义相机
-
-相机驱动通过 `[Camera]` 特性自动注册，无需手动注册。
-
-### 2. 检测算法扩展
-
-通过 Insnex Vision SDK 的 ToolBlock 系统扩展检测算法：
-
-```csharp
-using Insnex.Vision2D.Core;
-
-public class CustomInspectionTool : ToolBlock
-{
-    public override void Execute()
-    {
-        // 实现自定义检测逻辑
-        var inputImage = GetInputImage();
-        var result = PerformDetection(inputImage);
-        SetOutput("Result", result);
-    }
-
-    private DetectionResult PerformDetection(Image image)
-    {
-        // 自定义检测算法
-        // ...
-        return result;
-    }
-}
-```
-
-### 3. 通信协议扩展
-
-添加新的通信方式（如 Modbus、OPC-UA）：
-
-```csharp
-public interface ICommunication
-{
-    bool Connect();
-    void Disconnect();
-    void SendCommand(string command);
-    string ReceiveData();
-}
-
-public class ModbusCommunication : ICommunication
-{
-    // 实现 Modbus 通信协议
-    // ...
 }
 ```
 
