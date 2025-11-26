@@ -140,9 +140,13 @@ namespace VDEApp.Controllers
         public async Task SendToClientAsync(string clientKey, string message, Encoding encoding = null)
         {
             if (string.IsNullOrEmpty(clientKey))
+            {
                 throw new ArgumentNullException(nameof(clientKey), "Client key cannot be null or empty");
+            }
             if (string.IsNullOrEmpty(message))
+            {
                 throw new ArgumentNullException(nameof(message), "Message cannot be null or empty");
+            }
 
             // 【关键】使用指定编码（未指定则用默认，不强制转换编码）
             Encoding useEncoding = encoding ?? DefaultMessageEncoding;
@@ -166,9 +170,13 @@ namespace VDEApp.Controllers
                 consumeTask.ContinueWith(t =>
                 {
                     if (t.IsFaulted)
+                    {
                         Log.Error($"[TCP SEND QUEUE] Client {clientKey} - Consume task failed: {t.Exception?.InnerException?.Message}");
+                    }
                     else if (t.IsCanceled)
+                    {
                         Log.Info($"[TCP SEND QUEUE] Client {clientKey} - Consume task canceled");
+                    }
                 }, TaskContinuationOptions.ExecuteSynchronously);
             }
 
@@ -186,7 +194,9 @@ namespace VDEApp.Controllers
         public async Task BroadcastMessage(string message, Encoding encoding = null)
         {
             if (string.IsNullOrEmpty(message))
+            {
                 throw new ArgumentNullException(nameof(message), "Broadcast message cannot be null or empty");
+            }
 
             // 【关键】使用指定编码，不强制转换
             Encoding useEncoding = encoding ?? DefaultMessageEncoding;
@@ -213,7 +223,9 @@ namespace VDEApp.Controllers
                         consumeTask.ContinueWith(t =>
                         {
                             if (t.IsFaulted)
+                            {
                                 Log.Error($"[TCP BROADCAST] Client {clientKey} consume task failed: {t.Exception?.InnerException?.Message}");
+                            }
                         }, TaskContinuationOptions.ExecuteSynchronously);
                     }
                 }

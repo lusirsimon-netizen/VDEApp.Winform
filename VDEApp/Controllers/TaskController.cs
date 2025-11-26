@@ -28,9 +28,19 @@ namespace VDEApp.Controllers
         private Localizer _ => ServiceLocator.GlobalConfig.GlobalLocalizer;
 
         #region 事件定义
+        /// <summary>
+        /// 任务运行状态变更事件，布尔参数表示当前是否有任务在执行。
+        /// </summary>
         public event Action<bool> TaskRunningStateChanged;
+
+        /// <summary>
+        /// 任务列表或当前任务发生变更时触发的通知事件。
+        /// </summary>
         public event Action TasksChanged;
 
+        /// <summary>
+        /// 通知界面任务列表或当前任务发生了变更。
+        /// </summary>
         private void RaiseTasksChanged()
         {
             try
@@ -42,14 +52,24 @@ namespace VDEApp.Controllers
         #region 运行状态
         private int _runningTaskCount = 0;
         private bool _lastIsTaskRunning = false;
+
+        /// <summary>
+        /// 指示是否有任务正在运行（包含循环运行与单次运行）。
+        /// </summary>
         public bool IsTaskRunning => Volatile.Read(ref _runningTaskCount) > 0;
 
+        /// <summary>
+        /// 将运行中的任务计数加一并刷新运行状态标志。
+        /// </summary>
         private void IncrementRunningTaskCount()
         {
             Interlocked.Increment(ref _runningTaskCount);
             UpdateTaskRunningState();
         }
 
+        /// <summary>
+        /// 将运行中的任务计数减一并在计数异常时回退到零，然后刷新运行状态。
+        /// </summary>
         private void DecrementRunningTaskCount()
         {
             int newCount = Interlocked.Decrement(ref _runningTaskCount);
@@ -87,8 +107,10 @@ namespace VDEApp.Controllers
         public bool IsLoopRunning => _isLoopMode;
 
         /// <summary>
-        /// 获取任务锁（支持排队，同一任务串行执行；不同任务锁独立，支持并行）
+        /// 获取任务锁（支持排队，同一任务串行执行；不同任务锁独立，支持并行）。
         /// </summary>
+        /// <param name="task">需要获取锁的任务实例。</param>
+        /// <returns>对应任务的信号量实例。</returns>
         private SemaphoreSlim GetOrCreateTaskLock(TaskModel task)
         {
             if (task == null)
@@ -97,6 +119,10 @@ namespace VDEApp.Controllers
             return _taskLocks.GetOrAdd(task.Guid, _ => new SemaphoreSlim(1, 1));
         }
 
+        /// <summary>
+        /// 移除指定任务对应的信号量并释放资源。
+        /// </summary>
+        /// <param name="task">需要释放锁的任务实例。</param>
         private void RemoveTaskLock(TaskModel task)
         {
             if (task == null)
@@ -108,6 +134,7 @@ namespace VDEApp.Controllers
         /// <summary>
         /// 检查是否有外部任务正在运行（用于内部任务触发时的互斥）
         /// </summary>
+        /// <returns>存在外部任务占用锁时返回 true。</returns>
         private bool IsAnyExternalTaskRunning()
         {
             foreach (var semaphore in _taskLocks.Values)
@@ -124,6 +151,7 @@ namespace VDEApp.Controllers
         /// 内部任务触发检查（UI/循环/任务组）：阻止内部任务与外部任务并行
         /// </summary>
         /// <param name="triggerSource">触发来源</param>
+        /// <returns>当内部任务可执行时返回 true。</returns>
         private bool CheckInternalTaskCanRun(string triggerSource)
         {
             // 检查1：内部任务/循环是否正在运行
@@ -149,6 +177,7 @@ namespace VDEApp.Controllers
         /// <param name="task">要执行的任务</param>
         /// <param name="clientKey">客户端标识</param>
         /// <param name="errorMsg">错误信息（输出）</param>
+        /// <returns>外部任务允许运行时返回 true。</returns>
         private bool CheckExternalTaskCanRun(TaskModel task, string clientKey, out string errorMsg)
         {
             errorMsg = string.Empty;
@@ -176,6 +205,7 @@ namespace VDEApp.Controllers
         /// <summary>
         /// 显示任务运行中警告弹窗
         /// </summary>
+        /// <param name="triggerSource">导致冲突的触发来源描述。</param>
         private void ShowTaskRunningWarning(string triggerSource)
         {
             try
@@ -209,6 +239,11 @@ namespace VDEApp.Controllers
 
         #region 任务管理（增删改查、复制、重命名等）
         // 【原有代码不变】保持删除、保存、加载、复制、重命名、添加任务等逻辑
+
+        /// <summary>
+        /// 删除指定任务并维护当前项目的任务列表、当前任务指针以及事件订阅。
+        /// </summary>
+        /// <param name="task">需要删除的任务模型。</param>
         public void DeleteTask(TaskModel task)
         {
             var project = ServiceLocator.ProjectController.CurrentProject;
@@ -266,9 +301,9 @@ namespace VDEApp.Controllers
         }
 
         /// <summary>
-        /// 保存文件
+        /// 保存指定任务到磁盘。
         /// </summary>
-        /// <param name="task"></param>
+        /// <param name="task">需要持久化的任务模型。</param>
         public void SaveTask(TaskModel task)
         {
             try
@@ -282,9 +317,9 @@ namespace VDEApp.Controllers
         }
 
         /// <summary>
-        /// 加载任务节点
+        /// 加载任务节点配置。
         /// </summary>
-        /// <param name="task"></param>
+        /// <param name="task">需要加载配置的任务模型。</param>
         /// <exception cref="Exception"></exception>
         public void LoadTask(TaskModel task)
         {
@@ -299,10 +334,10 @@ namespace VDEApp.Controllers
         }
 
         /// <summary>
-        /// 复制任务
+        /// 复制现有任务并返回新任务实例。
         /// </summary>
-        /// <param name="sourceTask"></param>
-        /// <returns></returns>
+        /// <param name="sourceTask">作为复制模板的源任务。</param>
+        /// <returns>复制得到的新任务模型。</returns>
         /// <exception cref="InvalidOperationException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
         public TaskModel CopyTask(TaskModel sourceTask)
@@ -360,8 +395,8 @@ namespace VDEApp.Controllers
         /// <summary>
         /// 复制文件夹
         /// </summary>
-        /// <param name="sourceDir"></param>
-        /// <param name="destDir"></param>
+        /// <param name="sourceDir">源目录路径。</param>
+        /// <param name="destDir">目标目录路径。</param>
         private static void CopyDirectory(string sourceDir, string destDir)
         {
             Directory.CreateDirectory(destDir);
@@ -488,6 +523,9 @@ namespace VDEApp.Controllers
         /// <summary>
         /// 严格移动文件夹：如果被占用直接报错抛出异常
         /// </summary>
+        /// <param name="oldPath">原始目录路径。</param>
+        /// <param name="newPath">新的目标目录路径。</param>
+        /// <param name="folderDescription">目录用途描述，用于提示信息。</param>
         private void MoveDirectoryStrict(string oldPath, string newPath, string folderDescription)
         {
             if (!Directory.Exists(oldPath))
@@ -519,9 +557,9 @@ namespace VDEApp.Controllers
         }
 
         /// <summary>
-        /// 添加任务
+        /// 添加新任务并初始化对应文件结构。
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">新任务的名称。</param>
         /// <exception cref="InvalidOperationException"></exception>
         public void AddTask(string name)
         {
@@ -560,7 +598,7 @@ namespace VDEApp.Controllers
 
 
         /// <summary>
-        /// 重新订阅显示控制器事件
+        /// 重新订阅显示控制器事件以刷新显示状态。
         /// </summary>
         public void ResubscribeDisplayControllerEvents()
         {
@@ -590,9 +628,10 @@ namespace VDEApp.Controllers
 
 
         /// <summary>
-        /// 当前任务一次使用几张图片
+        /// 获取任务配置的单次采集批量数量。
         /// </summary>
-        /// <returns></returns>
+        /// <param name="task">需要查询采集批量的任务。</param>
+        /// <returns>采集节点相机配置的批量大小。</returns>
         public int GetAcqCameraBatchSize(TaskModel task)
         {
             if (task == null)
@@ -605,6 +644,10 @@ namespace VDEApp.Controllers
         #endregion
 
         #region 任务运行（内部任务：UI/循环/任务组）
+        /// <summary>
+        /// 执行任务流程，并在异常时记录日志后向上抛出。
+        /// </summary>
+        /// <param name="task">待运行的任务模型。</param>
         private void RunTask(TaskModel task)
         {
             if (task == null)
@@ -963,6 +1006,12 @@ namespace VDEApp.Controllers
             }
         }
 
+        /// <summary>
+        /// 将指定任务设置为当前任务并回复客户端。
+        /// </summary>
+        /// <param name="task">需要切换到的任务实例。</param>
+        /// <param name="client">TCP 客户端连接。</param>
+        /// <param name="clientKey">客户端唯一标识。</param>
         private void ChangeCurrentTask(TaskModel task, TcpClient client, string clientKey)
         {
             GlobalConfig.Instance.CurrentProject.CurrentTask = task;
@@ -971,6 +1020,14 @@ namespace VDEApp.Controllers
 
         }
 
+        /// <summary>
+        /// 构建用于 TCP 返回的任务执行响应消息。
+        /// </summary>
+        /// <param name="_task">关联的任务实例。</param>
+        /// <param name="_status">任务状态描述。</param>
+        /// <param name="_step">当前执行步骤。</param>
+        /// <param name="_message">附加提示信息。</param>
+        /// <returns>包含任务状态信息的 JSON 对象。</returns>
         private JObject GreateResponseMessage(TaskModel _task, string _status, string _step, string _message)
         {
             var response = new JObject
@@ -1052,6 +1109,11 @@ namespace VDEApp.Controllers
         /// <summary>
         /// 绑定任务节点完成事件（仅当前客户端）
         /// </summary>
+        /// <param name="task">需要绑定事件的任务实例。</param>
+        /// <param name="client">负责接收通知的客户端。</param>
+        /// <param name="clientKey">客户端唯一标识。</param>
+        /// <param name="mapKey">用于事件映射字典的键。</param>
+        /// <returns>封装了事件处理器的结构体。</returns>
         private TaskClientEventHandlers BindTaskNodeEvents(TaskModel task, TcpClient client, string clientKey, string mapKey)
         {
             var handlers = new TaskClientEventHandlers
@@ -1084,11 +1146,11 @@ namespace VDEApp.Controllers
             return handlers;
         }
         /// <summary>
-        /// 解绑任务节点 事件
+        /// 解绑任务节点事件并清理客户端映射。
         /// </summary>
-        /// <param name="task"></param>
-        /// <param name="handlers"></param>
-        /// <param name="mapKey"></param>
+        /// <param name="task">需要解绑事件的任务实例。</param>
+        /// <param name="handlers">绑定时创建的事件处理器集合。</param>
+        /// <param name="mapKey">事件映射表使用的键。</param>
         private void UnbindTaskNodeEvents(TaskModel task, TaskClientEventHandlers handlers, string mapKey)
         {
             if (handlers == null || task == null)
