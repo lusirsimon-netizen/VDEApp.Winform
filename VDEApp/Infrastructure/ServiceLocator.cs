@@ -31,7 +31,9 @@ namespace VDEApp.Infrastructure
         public static T GetService<T>() where T : class
         {
             if (_serviceProvider == null)
+            {
                 throw new InvalidOperationException("ServiceLocator 未初始化，请先调用 Initialize 方法");
+            }
 
             return _serviceProvider.GetRequiredService<T>();
         }

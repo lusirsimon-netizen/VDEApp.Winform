@@ -85,7 +85,9 @@ namespace VDEApp
             this.Text = AppConstant.AppName;
             var currentProject = ServiceLocator.GlobalConfig.CurrentProject;
             if (currentProject != null)
+            {
                 this.Text += $" - {currentProject.Name} {currentProject.Description}";
+            }
         }
         /// <summary>
         /// Exit
