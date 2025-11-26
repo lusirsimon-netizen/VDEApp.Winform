@@ -363,6 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 Output/*
+!Output/ScriptTemplate.txt
 !Output/Assemblies
 !Output/Languages
 !Output/log4net.config

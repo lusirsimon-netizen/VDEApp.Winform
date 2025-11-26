@@ -1,0 +1,203 @@
+#region namespace imports
+using System;
+using System.Collections;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using Insnex.ImageFile;
+using Insnex.Vision2D.Core;
+using Insnex.Vision2D;
+using Insnex.Vision2D.Common;
+using Insnex.Vision2D.Controls;
+using Insnex.Vision2D.ToolBlock;
+using Insnex.Vision2D.ImageProcessing;
+using Insnex.Vision2D.Finder;
+using Insnex.Vision2D.PatternMatch;
+using Insnex.Vision2D.Dimensioning;
+using Insnex.Vision2D.Intersection;
+using Insnex.Vision2D.Measurement;
+using Insnex.Vision3D.Core;
+using Insnex.Vision3D.CorePlus;
+using Insnex.Vision3D.Dimensioning;
+using Insnex.Vision3D.Inspection;
+using Insnex.VisionAI.EcoAISDKBase;
+using Insnex.VisionAI.EcoAITool;
+using System.Collections.Generic;
+#endregion
+
+public class InsToolBlockAdvancedScript : InsToolBlockAdvancedScriptBase
+{
+  #region Private Member Variables
+  private Insnex.Vision2D.ToolBlock.InsToolBlock mToolBlock;
+  #endregion
+
+  /// <summary>
+  /// Called when the parent tool is run.
+  /// </summary>
+  /// <param name="message">Sets the Message in the tool's RunStatus.</param>
+  /// <param name="result">Sets the Result in the tool's RunStatus</param>
+  /// <returns>Accept if the tool should run normally,
+  ///          False if GroupRun customizes run behavior</returns>
+  public override bool GroupRun(ref string message, ref InsToolResultConstants result)
+  {
+    // To launch the debugger and attach this script when executing it, uncomment the following lines.
+    // System.Diagnostics.Debugger.Launch();
+    // To let the execution stop in this script when a debugger is attached, uncomment the following lines.
+    // #if DEBUG
+    // if (System.Diagnostics.Debugger.IsAttached) System.Diagnostics.Debugger.Break();
+    // #endif
+    
+    
+    #region Dictionary Example
+    /*
+    // Get Dictionary "parameter" from Input Terminal
+    var dic = mToolBlock.Inputs["parameter"].Value as Dictionary<string,object>;
+    // Get Value from Dictionary (static class extensions function)
+    var str = dic.GetString("name");
+    var low = dic.GetRange("range").Item1;
+    var high = dic.GetRange("range").Item2;
+    */
+    #endregion
+    
+    
+    #region Sey DefectionImage List and Result Example
+    // param1 : the Record what you want to save
+    // param2 : top_left_corner.X
+    // param3 : top_left_corner.Y
+    // param4 : bottom_right_corner.X
+    // param5 : bottom_right_corner.Y
+    // param6 : Downsampling factor
+    /*
+    InsImage24PlanarColor res = InsSnapshotHelper.GenerateSnapshotImageRect(mToolBlock.CreateLastRunRecord().SubRecords[0], 951, 943, 2135, 3539, 0.5);
+    ArrayList test = new ArrayList();
+    test.Add(res);
+    SetDefectImage(test);
+    SetResult(true);
+    */
+    #endregion
+    
+
+    // Run each tool using the RunTool function
+    foreach(IInsTool tool in mToolBlock.Tools)
+    { 
+      mToolBlock.RunTool(tool, ref message, ref result);
+    } 
+
+    return false;
+  }
+
+  #region When the Current Run Record is Created
+  /// <summary>
+  /// Called when the current record may have changed and is being reconstructed
+  /// </summary>
+  /// <param name="currentRecord">
+  /// The new currentRecord is available to be initialized or customized.</param>
+  public override void ModifyCurrentRunRecord(Insnex.Vision2D.InsRecord currentRecord)
+  {
+  }
+  #endregion
+
+  #region When the Last Run Record is Created
+  /// <summary>
+  /// Called when the last run record may have changed and is being reconstructed
+  /// </summary>
+  /// <param name="lastRecord">
+  /// The new last run record is available to be initialized or customized.</param>
+  public override void ModifyLastRunRecord(Insnex.Vision2D.InsRecord lastRecord)
+  {
+  }
+  #endregion
+
+  #region When the Script is Initialized
+  /// <summary>
+  /// Perform any initialization required by your script here
+  /// </summary>
+  /// <param name="host">The host tool</param>
+  public override void Initialize(Insnex.Vision2D.ToolBlock.InsToolBlock host)
+  {
+    // DO NOT REMOVE - Call the base class implementation first - DO NOT REMOVE
+    base.Initialize(host);
+
+
+    // Store a local copy of the script host
+    this.mToolBlock = ((Insnex.Vision2D.ToolBlock.InsToolBlock) (host));
+  }
+  #endregion
+
+  #region Helper Function
+
+  private void SetDefectImage(ArrayList defectImages)
+  {
+    mToolBlock.Outputs["DefectImage"].Value = defectImages;
+  }
+  private void SetResult(bool ok)
+  {
+    mToolBlock.Outputs["Status"].Value = ok;
+  }
+
+  #endregion
+
+}
+
+public static class DicExtension
+{
+  /// <summary>
+  /// 安全获取字典值 - 扩展方法
+  /// </summary>
+  public static T GetValue<T>(this Dictionary<string, object> dict, string key)
+  {
+    if (dict != null && dict.ContainsKey(key))
+    {
+      try
+      {
+        var value = dict[key];
+        return (T) Convert.ChangeType(value, typeof(T));
+      }
+      catch
+      {
+        return default(T);
+      }
+    }
+    return default(T);
+  }
+
+  /// <summary>
+  /// 获取String
+  /// </summary>
+  public static string GetString(this Dictionary<string, object> dict, string key)
+  {
+    return dict.GetValue<string>(key);
+  }
+
+  /// <summary>
+  /// 获取Int
+  /// </summary>
+  public static int GetInt(this Dictionary<string, object> dict, string key)
+  {
+    return dict.GetValue<int>(key);
+  }
+
+  /// <summary>
+  /// 获取Double
+  /// </summary>
+  public static double GetDouble(this Dictionary<string, object> dict, string key)
+  {
+    return dict.GetValue<double>(key);
+  }
+
+  /// <summary>
+  /// 获取Bool
+  /// </summary>
+  public static bool GetBool(this Dictionary<string, object> dict, string key)
+  {
+    return dict.GetValue<bool>(key);
+  }
+
+  /// <summary>
+  /// 获取Range
+  /// </summary>
+  public static Tuple<double, double> GetRange(this Dictionary<string, object> dict, string key)
+  {
+    return dict.GetValue<Tuple<double, double>>(key);
+  }
+}
